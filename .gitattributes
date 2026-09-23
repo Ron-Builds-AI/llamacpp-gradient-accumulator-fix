@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Patch files MUST keep LF. Git converting them to CRLF makes `git apply` fail on Unix,
+# which is most of the people who would use this repository.
+*.diff -text
+# The reproduction data and the evidence logs are compared byte for byte. Leave them alone.
+*.txt -text

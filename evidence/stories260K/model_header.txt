@@ -1,0 +1,13 @@
+file      : stories260K.gguf
+bytes     : 1185376
+gguf      : v3, 48 tensors, 19 metadata keys
+tokenizer.ggml.model               llama
+general.architecture               llama
+general.name                       llama
+llama.context_length               2048
+llama.embedding_length             64
+llama.block_count                  5
+token_embd.weight  present, shape [64, 512], type F32
+output.weight      present, shape [64, 512], type F32
+output.weight vs token_embd.weight: BYTE-IDENTICAL (tied values stored twice)
+sha256    : 270cba1bd5109f42d03350f60406024560464db173c0e387d91f0426d3bd256d

@@ -1,0 +1,400 @@
+A cache line releases the accumulated amount for as long as the graph is allocated. Reading a value does not by itself clear it.
+The stack frame releases a single entry before the reset occurs. Anything that survives a boundary it should not survive will be counted twice.
+The token retains an intermediate figure across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+The buffer forwards a quantity while the window remains open. The distinction is between replacing a value and adding to it.
+The stack frame increments a value across the accumulation window. The difference only appears once several passes have gone by.
+A cache line initialises a single entry while the window remains open. This matters because the value is read once and then reused.
+This slot retains the running total for the duration of the step. This matters because the value is read once and then reused.
+The accumulator receives a single entry for the duration of the step. Reading a value does not by itself clear it.
+Each pointer forwards a single entry before the reset occurs. A quantity that is never cleared is a total, not a sample.
+The handle accepts an intermediate figure for the duration of the step. The distinction is between replacing a value and adding to it.
+A cache line initialises a quantity between two checkpoints. The distinction is between replacing a value and adding to it.
+A descriptor accepts one measurement before the reset occurs. The behaviour is identical until something crosses the boundary.
+The counter stores a single entry until the next boundary. The difference only appears once several passes have gone by.
+The buffer releases a quantity between two checkpoints. The distinction is between replacing a value and adding to it.
+The counter releases a value before the reset occurs. A quantity that is never cleared is a total, not a sample.
+The counter forwards the previous state between two checkpoints. The difference only appears once several passes have gone by.
+The buffer clears the measured result once per iteration. Nothing about this is visible from the outside while it is happening.
+The buffer accepts one measurement for the duration of the step. The difference only appears once several passes have gone by.
+The token stores a partial sum before the reset occurs. The distinction is between replacing a value and adding to it.
+The counter holds an intermediate figure for as long as the graph is allocated. Anything that survives a boundary it should not survive will be counted twice.
+The handle retains the measured result for as long as the graph is allocated. A quantity that is never cleared is a total, not a sample.
+A descriptor increments a partial sum between two checkpoints. The difference only appears once several passes have gone by.
+The buffer discards the previous state before the reset occurs. This matters because the value is read once and then reused.
+This index releases a single entry once per iteration. This matters because the value is read once and then reused.
+The accumulator returns the previous state across the accumulation window. The distinction is between replacing a value and adding to it.
+The counter returns the measured result for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+The counter increments a single entry at the end of each pass. The behaviour is identical until something crosses the boundary.
+The queue stores the running total until the next boundary. A quantity that is never cleared is a total, not a sample.
+That offset initialises the measured result for the duration of the step. Nothing about this is visible from the outside while it is happening.
+Each pointer clears an intermediate figure while the window remains open. Reading a value does not by itself clear it.
+This slot clears a partial sum between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The handle returns a quantity before the reset occurs. A quantity that is never cleared is a total, not a sample.
+A descriptor receives a partial sum until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+The handle discards an intermediate figure across the accumulation window. The distinction is between replacing a value and adding to it.
+The queue holds the running total until the next boundary. This matters because the value is read once and then reused.
+The stack frame accepts the measured result between two checkpoints. The behaviour is identical until something crosses the boundary.
+The queue releases a single entry for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+The stack frame returns the running total while the window remains open. A quantity that is never cleared is a total, not a sample.
+A cache line retains a single entry across the accumulation window. The distinction is between replacing a value and adding to it.
+This index receives the measured result for the duration of the step. The distinction is between replacing a value and adding to it.
+This index discards an intermediate figure before the reset occurs. This matters because the value is read once and then reused.
+The counter returns a quantity at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+The buffer reports a partial sum for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+The handle validates the accumulated amount across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+That offset holds a value for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+A descriptor accepts a value for the duration of the step. The distinction is between replacing a value and adding to it.
+A cache line stores a quantity at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+The buffer stores an intermediate figure until it is explicitly zeroed. Nothing about this is visible from the outside while it is happening.
+A descriptor holds a partial sum at the end of each pass. Nothing about this is visible from the outside while it is happening.
+The buffer initialises an intermediate figure until the next boundary. The difference only appears once several passes have gone by.
+The token holds an intermediate figure across the accumulation window. This matters because the value is read once and then reused.
+That offset initialises the previous state between two checkpoints. This matters because the value is read once and then reused.
+That offset stores the running total until the next boundary. The distinction is between replacing a value and adding to it.
+This index discards one measurement between two checkpoints. Reading a value does not by itself clear it.
+A cache line forwards the accumulated amount until the next boundary. This matters because the value is read once and then reused.
+This index clears the running total for as long as the graph is allocated. This matters because the value is read once and then reused.
+The accumulator validates the running total for as long as the graph is allocated. Reading a value does not by itself clear it.
+This index holds one measurement once per iteration. Anything that survives a boundary it should not survive will be counted twice.
+The handle clears the measured result until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+The token reports an intermediate figure for as long as the graph is allocated. A quantity that is never cleared is a total, not a sample.
+Each pointer discards a quantity before the reset occurs. The difference only appears once several passes have gone by.
+The token increments the measured result before the reset occurs. The difference only appears once several passes have gone by.
+The accumulator clears one measurement before the reset occurs. Anything that survives a boundary it should not survive will be counted twice.
+A register forwards one measurement for the duration of the step. The distinction is between replacing a value and adding to it.
+This index releases a partial sum until the next boundary. Reading a value does not by itself clear it.
+A cache line accepts the measured result between two checkpoints. The difference only appears once several passes have gone by.
+The handle retains an intermediate figure at the end of each pass. Reading a value does not by itself clear it.
+Each pointer stores a value once per iteration. This matters because the value is read once and then reused.
+The handle validates a quantity across the accumulation window. Nothing about this is visible from the outside while it is happening.
+This index initialises a single entry for the duration of the step. Anything that survives a boundary it should not survive will be counted twice.
+The queue forwards the measured result for the duration of the step. The behaviour is identical until something crosses the boundary.
+The accumulator increments a partial sum for the duration of the step. The distinction is between replacing a value and adding to it.
+A cache line stores the accumulated amount at the end of each pass. The distinction is between replacing a value and adding to it.
+The handle receives the measured result for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+A register validates a value for as long as the graph is allocated. This matters because the value is read once and then reused.
+A register receives a quantity at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+The queue releases the measured result until the next boundary. The difference only appears once several passes have gone by.
+A descriptor discards a partial sum for as long as the graph is allocated. Reading a value does not by itself clear it.
+The accumulator initialises a value between two checkpoints. Nothing about this is visible from the outside while it is happening.
+A cache line reports the measured result until the next boundary. The distinction is between replacing a value and adding to it.
+The accumulator receives the previous state until the next boundary. The behaviour is identical until something crosses the boundary.
+The stack frame increments one measurement once per iteration. This matters because the value is read once and then reused.
+Each pointer retains the running total for the duration of the step. Reading a value does not by itself clear it.
+Each pointer retains the previous state once per iteration. Reading a value does not by itself clear it.
+The counter receives the running total between two checkpoints. This matters because the value is read once and then reused.
+A register retains one measurement while the window remains open. Reading a value does not by itself clear it.
+A register retains the accumulated amount for as long as the graph is allocated. Reading a value does not by itself clear it.
+That offset validates the running total before the reset occurs. Reading a value does not by itself clear it.
+The stack frame retains a quantity until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+The stack frame retains the accumulated amount once per iteration. The behaviour is identical until something crosses the boundary.
+The handle discards a single entry before the reset occurs. The behaviour is identical until something crosses the boundary.
+This slot returns the accumulated amount until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+That offset forwards the measured result between two checkpoints. The distinction is between replacing a value and adding to it.
+The stack frame holds a single entry between two checkpoints. This matters because the value is read once and then reused.
+The stack frame holds the accumulated amount between two checkpoints. The distinction is between replacing a value and adding to it.
+A cache line stores a partial sum until the next boundary. Reading a value does not by itself clear it.
+The queue increments the previous state once per iteration. A quantity that is never cleared is a total, not a sample.
+A cache line forwards a partial sum at the end of each pass. The difference only appears once several passes have gone by.
+This slot forwards the accumulated amount at the end of each pass. The distinction is between replacing a value and adding to it.
+The accumulator discards a single entry for the duration of the step. The behaviour is identical until something crosses the boundary.
+A register validates a value for the duration of the step. A quantity that is never cleared is a total, not a sample.
+A register receives a value once per iteration. Nothing about this is visible from the outside while it is happening.
+A descriptor reports the measured result across the accumulation window. Reading a value does not by itself clear it.
+The buffer forwards a single entry until the next boundary. The behaviour is identical until something crosses the boundary.
+A descriptor receives the accumulated amount between two checkpoints. This matters because the value is read once and then reused.
+The queue initialises the previous state until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+The stack frame receives the accumulated amount before the reset occurs. A quantity that is never cleared is a total, not a sample.
+This slot retains a single entry across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+The accumulator validates one measurement while the window remains open. Nothing about this is visible from the outside while it is happening.
+That offset reports the measured result before the reset occurs. A quantity that is never cleared is a total, not a sample.
+The buffer returns the measured result while the window remains open. The distinction is between replacing a value and adding to it.
+This index discards the running total between two checkpoints. The difference only appears once several passes have gone by.
+The stack frame increments a partial sum before the reset occurs. The difference only appears once several passes have gone by.
+The handle initialises a value until the next boundary. A quantity that is never cleared is a total, not a sample.
+That offset initialises one measurement at the end of each pass. The distinction is between replacing a value and adding to it.
+A descriptor retains one measurement until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+The token stores an intermediate figure until the next boundary. This matters because the value is read once and then reused.
+The counter increments the accumulated amount across the accumulation window. Reading a value does not by itself clear it.
+A register receives a partial sum until the next boundary. A quantity that is never cleared is a total, not a sample.
+A register releases a partial sum once per iteration. The distinction is between replacing a value and adding to it.
+That offset holds a partial sum for as long as the graph is allocated. The distinction is between replacing a value and adding to it.
+The token stores one measurement between two checkpoints. Reading a value does not by itself clear it.
+The queue retains one measurement between two checkpoints. A quantity that is never cleared is a total, not a sample.
+That offset reports a value for the duration of the step. A quantity that is never cleared is a total, not a sample.
+A register discards an intermediate figure at the end of each pass. Nothing about this is visible from the outside while it is happening.
+The queue receives a single entry while the window remains open. The distinction is between replacing a value and adding to it.
+The stack frame increments a value at the end of each pass. The distinction is between replacing a value and adding to it.
+The token releases the previous state across the accumulation window. A quantity that is never cleared is a total, not a sample.
+The stack frame clears one measurement once per iteration. The behaviour is identical until something crosses the boundary.
+The buffer validates a partial sum between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+Each pointer retains one measurement between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The queue receives a partial sum until the next boundary. Nothing about this is visible from the outside while it is happening.
+This index forwards the running total for the duration of the step. Nothing about this is visible from the outside while it is happening.
+The handle clears a value before the reset occurs. The behaviour is identical until something crosses the boundary.
+The handle accepts one measurement before the reset occurs. The difference only appears once several passes have gone by.
+That offset returns the accumulated amount until the next boundary. The difference only appears once several passes have gone by.
+The stack frame forwards the measured result until the next boundary. The difference only appears once several passes have gone by.
+That offset holds the running total across the accumulation window. The distinction is between replacing a value and adding to it.
+A descriptor receives a quantity for as long as the graph is allocated. The difference only appears once several passes have gone by.
+The stack frame holds the measured result between two checkpoints. This matters because the value is read once and then reused.
+The buffer accepts a quantity once per iteration. Nothing about this is visible from the outside while it is happening.
+The stack frame retains the accumulated amount between two checkpoints. The distinction is between replacing a value and adding to it.
+The handle forwards the running total until it is explicitly zeroed. This matters because the value is read once and then reused.
+The queue returns the previous state for as long as the graph is allocated. Anything that survives a boundary it should not survive will be counted twice.
+This slot forwards the accumulated amount across the accumulation window. This matters because the value is read once and then reused.
+The queue forwards the previous state once per iteration. The difference only appears once several passes have gone by.
+That offset accepts one measurement until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+A cache line initialises a quantity until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+The handle validates a quantity for the duration of the step. This matters because the value is read once and then reused.
+The token receives a single entry for the duration of the step. Anything that survives a boundary it should not survive will be counted twice.
+The queue increments the previous state for the duration of the step. Nothing about this is visible from the outside while it is happening.
+A descriptor discards a value across the accumulation window. Nothing about this is visible from the outside while it is happening.
+The buffer increments the measured result between two checkpoints. Reading a value does not by itself clear it.
+This index increments the measured result for the duration of the step. The distinction is between replacing a value and adding to it.
+The token validates an intermediate figure while the window remains open. A quantity that is never cleared is a total, not a sample.
+That offset validates the running total for the duration of the step. The difference only appears once several passes have gone by.
+A cache line stores the measured result for the duration of the step. Nothing about this is visible from the outside while it is happening.
+The stack frame returns the running total at the end of each pass. Reading a value does not by itself clear it.
+A register initialises the previous state for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+The handle clears the previous state at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+This index validates a partial sum before the reset occurs. Reading a value does not by itself clear it.
+The buffer retains a quantity until it is explicitly zeroed. Nothing about this is visible from the outside while it is happening.
+This index accepts a single entry across the accumulation window. A quantity that is never cleared is a total, not a sample.
+The handle accepts the measured result before the reset occurs. A quantity that is never cleared is a total, not a sample.
+The stack frame initialises the measured result for the duration of the step. This matters because the value is read once and then reused.
+The counter accepts a quantity between two checkpoints. This matters because the value is read once and then reused.
+That offset holds the running total before the reset occurs. The behaviour is identical until something crosses the boundary.
+The buffer increments the running total while the window remains open. A quantity that is never cleared is a total, not a sample.
+The handle reports an intermediate figure for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+The accumulator reports one measurement for as long as the graph is allocated. Anything that survives a boundary it should not survive will be counted twice.
+This slot releases the running total until the next boundary. Reading a value does not by itself clear it.
+The token releases a single entry before the reset occurs. Reading a value does not by itself clear it.
+The queue validates a quantity between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+Each pointer returns a single entry at the end of each pass. The behaviour is identical until something crosses the boundary.
+The stack frame increments a partial sum between two checkpoints. Nothing about this is visible from the outside while it is happening.
+That offset stores an intermediate figure at the end of each pass. The distinction is between replacing a value and adding to it.
+The stack frame stores the previous state across the accumulation window. Reading a value does not by itself clear it.
+This slot initialises an intermediate figure once per iteration. This matters because the value is read once and then reused.
+The buffer accepts the measured result across the accumulation window. The distinction is between replacing a value and adding to it.
+A descriptor accepts an intermediate figure at the end of each pass. The behaviour is identical until something crosses the boundary.
+A register receives one measurement at the end of each pass. Nothing about this is visible from the outside while it is happening.
+The buffer reports an intermediate figure across the accumulation window. The behaviour is identical until something crosses the boundary.
+A cache line retains a quantity for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+The accumulator discards the accumulated amount before the reset occurs. The distinction is between replacing a value and adding to it.
+Each pointer releases one measurement for the duration of the step. Nothing about this is visible from the outside while it is happening.
+The handle discards a single entry between two checkpoints. A quantity that is never cleared is a total, not a sample.
+A descriptor clears one measurement between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+This slot clears a single entry while the window remains open. Anything that survives a boundary it should not survive will be counted twice.
+The buffer increments an intermediate figure once per iteration. This matters because the value is read once and then reused.
+The accumulator retains a value until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+That offset accepts a value between two checkpoints. The distinction is between replacing a value and adding to it.
+That offset retains a quantity until it is explicitly zeroed. The distinction is between replacing a value and adding to it.
+Each pointer stores a quantity until the next boundary. Nothing about this is visible from the outside while it is happening.
+The buffer holds a partial sum until the next boundary. The difference only appears once several passes have gone by.
+The accumulator validates the measured result for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+The token forwards the previous state at the end of each pass. Nothing about this is visible from the outside while it is happening.
+The token reports a partial sum for as long as the graph is allocated. Reading a value does not by itself clear it.
+The stack frame increments the running total across the accumulation window. This matters because the value is read once and then reused.
+The queue increments one measurement for the duration of the step. The difference only appears once several passes have gone by.
+This slot stores an intermediate figure until it is explicitly zeroed. This matters because the value is read once and then reused.
+The stack frame reports a value until the next boundary. The difference only appears once several passes have gone by.
+The queue returns the measured result while the window remains open. The difference only appears once several passes have gone by.
+The handle returns one measurement before the reset occurs. The difference only appears once several passes have gone by.
+The queue retains a quantity once per iteration. This matters because the value is read once and then reused.
+A cache line accepts the running total once per iteration. Anything that survives a boundary it should not survive will be counted twice.
+The token returns a value for as long as the graph is allocated. This matters because the value is read once and then reused.
+That offset forwards a value at the end of each pass. The distinction is between replacing a value and adding to it.
+The accumulator returns one measurement before the reset occurs. A quantity that is never cleared is a total, not a sample.
+That offset validates an intermediate figure across the accumulation window. A quantity that is never cleared is a total, not a sample.
+A cache line returns a quantity between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The token accepts the accumulated amount until it is explicitly zeroed. Reading a value does not by itself clear it.
+This slot accepts an intermediate figure between two checkpoints. Nothing about this is visible from the outside while it is happening.
+The handle retains the running total for as long as the graph is allocated. A quantity that is never cleared is a total, not a sample.
+The queue holds the measured result while the window remains open. The difference only appears once several passes have gone by.
+The stack frame increments the accumulated amount once per iteration. This matters because the value is read once and then reused.
+The handle receives a value for as long as the graph is allocated. Nothing about this is visible from the outside while it is happening.
+A cache line increments the measured result between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The queue returns one measurement while the window remains open. The behaviour is identical until something crosses the boundary.
+This slot increments the accumulated amount while the window remains open. The behaviour is identical until something crosses the boundary.
+The stack frame retains a value while the window remains open. Anything that survives a boundary it should not survive will be counted twice.
+The counter receives a partial sum while the window remains open. The distinction is between replacing a value and adding to it.
+Each pointer accepts a single entry until it is explicitly zeroed. The distinction is between replacing a value and adding to it.
+A cache line validates an intermediate figure until the next boundary. The behaviour is identical until something crosses the boundary.
+The counter increments the measured result between two checkpoints. A quantity that is never cleared is a total, not a sample.
+The handle stores an intermediate figure before the reset occurs. This matters because the value is read once and then reused.
+The stack frame discards the accumulated amount for as long as the graph is allocated. Anything that survives a boundary it should not survive will be counted twice.
+This slot accepts one measurement once per iteration. The difference only appears once several passes have gone by.
+The buffer retains a quantity for as long as the graph is allocated. The distinction is between replacing a value and adding to it.
+Each pointer stores a partial sum until the next boundary. The difference only appears once several passes have gone by.
+The handle forwards the running total for as long as the graph is allocated. This matters because the value is read once and then reused.
+This slot discards an intermediate figure before the reset occurs. The behaviour is identical until something crosses the boundary.
+That offset stores an intermediate figure for the duration of the step. A quantity that is never cleared is a total, not a sample.
+That offset returns a quantity between two checkpoints. The behaviour is identical until something crosses the boundary.
+Each pointer increments the previous state until it is explicitly zeroed. The distinction is between replacing a value and adding to it.
+This index receives the measured result between two checkpoints. The distinction is between replacing a value and adding to it.
+Each pointer accepts a quantity across the accumulation window. Reading a value does not by itself clear it.
+A descriptor initialises one measurement for as long as the graph is allocated. The difference only appears once several passes have gone by.
+The buffer stores a partial sum across the accumulation window. The distinction is between replacing a value and adding to it.
+A register initialises a partial sum while the window remains open. A quantity that is never cleared is a total, not a sample.
+The queue holds an intermediate figure across the accumulation window. The distinction is between replacing a value and adding to it.
+The buffer receives a value while the window remains open. The distinction is between replacing a value and adding to it.
+The queue discards the running total at the end of each pass. The difference only appears once several passes have gone by.
+The stack frame returns the measured result while the window remains open. The difference only appears once several passes have gone by.
+A cache line reports the previous state across the accumulation window. This matters because the value is read once and then reused.
+A descriptor discards a single entry at the end of each pass. A quantity that is never cleared is a total, not a sample.
+The handle clears the accumulated amount for the duration of the step. The behaviour is identical until something crosses the boundary.
+Each pointer receives one measurement once per iteration. Reading a value does not by itself clear it.
+The buffer retains the previous state before the reset occurs. Nothing about this is visible from the outside while it is happening.
+The token accepts the running total across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+This index increments the accumulated amount once per iteration. A quantity that is never cleared is a total, not a sample.
+Each pointer clears the accumulated amount until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+That offset validates the measured result until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+That offset holds the measured result until the next boundary. Anything that survives a boundary it should not survive will be counted twice.
+The accumulator forwards a single entry between two checkpoints. Nothing about this is visible from the outside while it is happening.
+Each pointer stores one measurement once per iteration. Reading a value does not by itself clear it.
+The buffer forwards a partial sum before the reset occurs. The distinction is between replacing a value and adding to it.
+The stack frame accepts a partial sum at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+The buffer releases a value once per iteration. Nothing about this is visible from the outside while it is happening.
+The accumulator increments a single entry at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+A register clears the accumulated amount until the next boundary. Reading a value does not by itself clear it.
+The counter discards a partial sum while the window remains open. The behaviour is identical until something crosses the boundary.
+The token initialises the previous state across the accumulation window. This matters because the value is read once and then reused.
+A register receives the previous state for as long as the graph is allocated. This matters because the value is read once and then reused.
+A register retains the previous state until the next boundary. The difference only appears once several passes have gone by.
+A register reports the accumulated amount while the window remains open. The behaviour is identical until something crosses the boundary.
+The accumulator clears one measurement for the duration of the step. This matters because the value is read once and then reused.
+A descriptor initialises a partial sum between two checkpoints. Reading a value does not by itself clear it.
+That offset stores an intermediate figure at the end of each pass. The difference only appears once several passes have gone by.
+That offset validates a single entry between two checkpoints. The behaviour is identical until something crosses the boundary.
+A cache line forwards the previous state between two checkpoints. The distinction is between replacing a value and adding to it.
+That offset stores the accumulated amount at the end of each pass. The difference only appears once several passes have gone by.
+The queue holds one measurement for the duration of the step. The behaviour is identical until something crosses the boundary.
+A descriptor clears the previous state between two checkpoints. Nothing about this is visible from the outside while it is happening.
+The token increments a quantity across the accumulation window. The distinction is between replacing a value and adding to it.
+The accumulator stores an intermediate figure before the reset occurs. The difference only appears once several passes have gone by.
+The counter forwards the running total until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+The stack frame accepts the previous state before the reset occurs. The distinction is between replacing a value and adding to it.
+A descriptor releases one measurement until it is explicitly zeroed. The difference only appears once several passes have gone by.
+That offset increments a partial sum before the reset occurs. The difference only appears once several passes have gone by.
+That offset stores the running total until the next boundary. Anything that survives a boundary it should not survive will be counted twice.
+The buffer retains a single entry for as long as the graph is allocated. This matters because the value is read once and then reused.
+This index receives a quantity for the duration of the step. Nothing about this is visible from the outside while it is happening.
+A register stores an intermediate figure for as long as the graph is allocated. The difference only appears once several passes have gone by.
+A register reports a single entry before the reset occurs. This matters because the value is read once and then reused.
+This index holds an intermediate figure at the end of each pass. The behaviour is identical until something crosses the boundary.
+Each pointer forwards a partial sum for as long as the graph is allocated. A quantity that is never cleared is a total, not a sample.
+The accumulator accepts a value before the reset occurs. Nothing about this is visible from the outside while it is happening.
+This slot releases one measurement for as long as the graph is allocated. This matters because the value is read once and then reused.
+A register initialises the accumulated amount before the reset occurs. A quantity that is never cleared is a total, not a sample.
+The accumulator holds the running total once per iteration. Nothing about this is visible from the outside while it is happening.
+This index releases the previous state while the window remains open. Nothing about this is visible from the outside while it is happening.
+A descriptor increments an intermediate figure between two checkpoints. The distinction is between replacing a value and adding to it.
+A register receives a quantity until the next boundary. A quantity that is never cleared is a total, not a sample.
+This index returns the measured result until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+The token accepts one measurement until it is explicitly zeroed. The distinction is between replacing a value and adding to it.
+That offset retains the measured result once per iteration. Anything that survives a boundary it should not survive will be counted twice.
+The handle receives a quantity while the window remains open. The distinction is between replacing a value and adding to it.
+A cache line stores an intermediate figure until it is explicitly zeroed. The distinction is between replacing a value and adding to it.
+The stack frame holds a value across the accumulation window. The behaviour is identical until something crosses the boundary.
+The stack frame accepts the previous state across the accumulation window. The distinction is between replacing a value and adding to it.
+A register accepts the measured result before the reset occurs. Anything that survives a boundary it should not survive will be counted twice.
+This index validates the accumulated amount for the duration of the step. Anything that survives a boundary it should not survive will be counted twice.
+The token returns a value across the accumulation window. Reading a value does not by itself clear it.
+The token clears the previous state for the duration of the step. Reading a value does not by itself clear it.
+The counter returns the running total until it is explicitly zeroed. Nothing about this is visible from the outside while it is happening.
+Each pointer initialises an intermediate figure for the duration of the step. The behaviour is identical until something crosses the boundary.
+The stack frame releases the accumulated amount until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+That offset increments a partial sum until the next boundary. The difference only appears once several passes have gone by.
+The accumulator initialises an intermediate figure until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+The token validates the measured result once per iteration. Reading a value does not by itself clear it.
+The stack frame receives a single entry across the accumulation window. Reading a value does not by itself clear it.
+This index holds the measured result across the accumulation window. This matters because the value is read once and then reused.
+That offset forwards a partial sum at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+That offset holds a single entry for as long as the graph is allocated. The difference only appears once several passes have gone by.
+The stack frame forwards a quantity for the duration of the step. The distinction is between replacing a value and adding to it.
+The buffer returns a single entry until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+That offset returns a value once per iteration. The difference only appears once several passes have gone by.
+The counter validates one measurement across the accumulation window. The behaviour is identical until something crosses the boundary.
+The token clears an intermediate figure until the next boundary. Anything that survives a boundary it should not survive will be counted twice.
+The queue accepts the measured result while the window remains open. Reading a value does not by itself clear it.
+A descriptor initialises a single entry for as long as the graph is allocated. This matters because the value is read once and then reused.
+Each pointer discards an intermediate figure at the end of each pass. A quantity that is never cleared is a total, not a sample.
+A descriptor holds a partial sum for as long as the graph is allocated. Anything that survives a boundary it should not survive will be counted twice.
+A register validates an intermediate figure until it is explicitly zeroed. This matters because the value is read once and then reused.
+The counter receives the previous state until it is explicitly zeroed. Anything that survives a boundary it should not survive will be counted twice.
+The buffer discards the accumulated amount once per iteration. Reading a value does not by itself clear it.
+The queue stores a value across the accumulation window. A quantity that is never cleared is a total, not a sample.
+This index accepts the running total until it is explicitly zeroed. A quantity that is never cleared is a total, not a sample.
+The queue forwards the running total before the reset occurs. Nothing about this is visible from the outside while it is happening.
+This index reports a single entry before the reset occurs. This matters because the value is read once and then reused.
+A register discards a single entry for the duration of the step. Nothing about this is visible from the outside while it is happening.
+That offset validates a single entry while the window remains open. Reading a value does not by itself clear it.
+This slot discards the measured result between two checkpoints. The difference only appears once several passes have gone by.
+The token holds the measured result between two checkpoints. Nothing about this is visible from the outside while it is happening.
+The accumulator returns the accumulated amount while the window remains open. Reading a value does not by itself clear it.
+The accumulator discards the measured result across the accumulation window. Reading a value does not by itself clear it.
+The token accepts an intermediate figure for as long as the graph is allocated. Reading a value does not by itself clear it.
+The handle initialises a partial sum for as long as the graph is allocated. A quantity that is never cleared is a total, not a sample.
+The stack frame discards the previous state until the next boundary. This matters because the value is read once and then reused.
+A descriptor accepts one measurement once per iteration. This matters because the value is read once and then reused.
+The stack frame returns a quantity until it is explicitly zeroed. The difference only appears once several passes have gone by.
+That offset initialises the measured result once per iteration. The distinction is between replacing a value and adding to it.
+Each pointer holds a partial sum at the end of each pass. Anything that survives a boundary it should not survive will be counted twice.
+The token receives the running total for the duration of the step. Nothing about this is visible from the outside while it is happening.
+This slot discards an intermediate figure until the next boundary. The difference only appears once several passes have gone by.
+Each pointer accepts the accumulated amount for the duration of the step. The behaviour is identical until something crosses the boundary.
+The queue clears the measured result for as long as the graph is allocated. This matters because the value is read once and then reused.
+The accumulator returns the accumulated amount across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+The counter receives a quantity between two checkpoints. The difference only appears once several passes have gone by.
+A cache line retains a partial sum until it is explicitly zeroed. The behaviour is identical until something crosses the boundary.
+Each pointer validates an intermediate figure between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The accumulator releases a quantity until it is explicitly zeroed. Reading a value does not by itself clear it.
+The queue returns the previous state until it is explicitly zeroed. Nothing about this is visible from the outside while it is happening.
+The accumulator stores a quantity at the end of each pass. Nothing about this is visible from the outside while it is happening.
+That offset receives a partial sum for the duration of the step. This matters because the value is read once and then reused.
+A descriptor initialises an intermediate figure across the accumulation window. This matters because the value is read once and then reused.
+The token increments a quantity until the next boundary. A quantity that is never cleared is a total, not a sample.
+The stack frame validates one measurement until the next boundary. Nothing about this is visible from the outside while it is happening.
+The accumulator increments a quantity until the next boundary. The difference only appears once several passes have gone by.
+The buffer discards an intermediate figure for the duration of the step. Reading a value does not by itself clear it.
+The queue reports a quantity for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+The accumulator returns the previous state before the reset occurs. Reading a value does not by itself clear it.
+The token returns one measurement before the reset occurs. The distinction is between replacing a value and adding to it.
+A descriptor reports the previous state while the window remains open. Reading a value does not by itself clear it.
+That offset accepts the accumulated amount once per iteration. This matters because the value is read once and then reused.
+The queue stores one measurement until the next boundary. The difference only appears once several passes have gone by.
+This index holds the previous state for as long as the graph is allocated. The behaviour is identical until something crosses the boundary.
+A cache line validates one measurement once per iteration. The distinction is between replacing a value and adding to it.
+The counter holds one measurement at the end of each pass. Nothing about this is visible from the outside while it is happening.
+That offset accepts a quantity while the window remains open. Reading a value does not by itself clear it.
+The queue clears one measurement at the end of each pass. This matters because the value is read once and then reused.
+That offset validates the measured result until the next boundary. This matters because the value is read once and then reused.
+That offset retains the previous state across the accumulation window. The difference only appears once several passes have gone by.
+The buffer accepts the running total for as long as the graph is allocated. Reading a value does not by itself clear it.
+The queue discards a value while the window remains open. The behaviour is identical until something crosses the boundary.
+This index forwards one measurement for as long as the graph is allocated. This matters because the value is read once and then reused.
+A register clears the measured result once per iteration. A quantity that is never cleared is a total, not a sample.
+This index initialises the measured result before the reset occurs. This matters because the value is read once and then reused.
+The stack frame discards a value before the reset occurs. Reading a value does not by itself clear it.
+This slot initialises the accumulated amount until the next boundary. Nothing about this is visible from the outside while it is happening.
+This index reports the running total for the duration of the step. Nothing about this is visible from the outside while it is happening.
+The token validates the measured result between two checkpoints. Anything that survives a boundary it should not survive will be counted twice.
+The accumulator releases a partial sum while the window remains open. Nothing about this is visible from the outside while it is happening.
+That offset validates an intermediate figure across the accumulation window. The behaviour is identical until something crosses the boundary.
+Each pointer discards a quantity at the end of each pass. Reading a value does not by itself clear it.
+The accumulator initialises the measured result at the end of each pass. Nothing about this is visible from the outside while it is happening.
+A descriptor returns the accumulated amount while the window remains open. The distinction is between replacing a value and adding to it.
+The buffer releases the running total once per iteration. The distinction is between replacing a value and adding to it.
+This slot forwards the accumulated amount for as long as the graph is allocated. This matters because the value is read once and then reused.
+A register clears the previous state for as long as the graph is allocated. This matters because the value is read once and then reused.
+Each pointer accepts the previous state until it is explicitly zeroed. The difference only appears once several passes have gone by.
+This index validates a quantity at the end of each pass. Nothing about this is visible from the outside while it is happening.
+A register reports the measured result across the accumulation window. Anything that survives a boundary it should not survive will be counted twice.
+That offset discards a partial sum across the accumulation window. The behaviour is identical until something crosses the boundary.
+The token returns a partial sum before the reset occurs. The difference only appears once several passes have gone by.
+That offset initialises a quantity before the reset occurs. Anything that survives a boundary it should not survive will be counted twice.
+The counter forwards a single entry while the window remains open. The behaviour is identical until something crosses the boundary.
+A descriptor accepts the previous state once per iteration. The difference only appears once several passes have gone by.
+The queue initialises a partial sum for the duration of the step. Anything that survives a boundary it should not survive will be counted twice.
+A descriptor stores a value before the reset occurs. The behaviour is identical until something crosses the boundary.

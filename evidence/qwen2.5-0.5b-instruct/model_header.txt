@@ -1,0 +1,20 @@
+file      : qwen05_f32.gguf
+bytes     : 2526617440
+gguf      : v3, 291 tensors, 26 metadata keys
+general.architecture               qwen2
+general.type                       model
+general.name                       qwen2.5-0.5b-instruct
+general.version                    v0.1
+general.finetune                   qwen2.5-0.5b-instruct
+general.size_label                 630M
+qwen2.block_count                  24
+qwen2.context_length               32768
+qwen2.embedding_length             896
+tokenizer.ggml.model               gpt2
+tokenizer.ggml.pre                 qwen2
+general.quantization_version       2
+general.file_type                  0
+token_embd.weight  present, shape [896, 151936], type F32
+output.weight      present, shape [896, 151936], type F32
+output.weight vs token_embd.weight: NOT identical. 99.22% of 136134656 elements differ, max |diff| 0.0063362, cosine 0.99901
+sha256    : 89ac62425c46039797e260ad4789adeda174320aa400e8b4b0d4a5e9aaa4ac25

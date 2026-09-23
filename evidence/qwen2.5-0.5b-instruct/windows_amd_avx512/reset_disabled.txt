@@ -1,0 +1,80 @@
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.002.926 I main: forcing load_mode = none to enable writable pointers to the weights
+0.00.002.929 I main: force changing k cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.002.930 I main: force changing v cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.308.910 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.772.129 I cmn          init: llama threadpool init, n_threads = 6
+0.00.807.537 I 
+0.00.807.571 I system_info: n_threads = 6 (n_threads_batch = 6) / 32 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | AVX512 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.817.614 I -optimizer adamw -lr0 1e-30 -wd 0 -lr-min -1 -min-epochs -1 -epochs 1 -period 1 -val 0.05
+0.01.594.701 I epoch 0 lr=1e-30
+GRAD-PROBE iter=1 params=290 nonfinite=0 unread=0 max|grad|=2.77055 on blk.3.ffn_up.weight | max|w|=214 on blk.8.attn_k.bias
+train: [▏       ] data=0000001/0000033 loss=2.23607±nan acc=58.01±2.18% t=00:00:06 ETA=00:03:19 0.07.053.010 I epoch 0 lr=1e-30
+GRAD-PROBE iter=2 params=290 nonfinite=0 unread=0 max|grad|=5.27423 on blk.3.ffn_up.weight | max|w|=214 on blk.8.attn_k.bias
+train: [▍       ] data=0000002/0000033 loss=2.23815±0.00212 acc=57.13±1.55% t=00:00:11 ETA=00:02:53 0.12.026.628 I epoch 0 lr=1e-30
+GRAD-PROBE iter=3 params=290 nonfinite=0 unread=0 max|grad|=6.61294 on blk.3.ffn_up.weight | max|w|=214 on blk.8.attn_k.bias
+train: [▋       ] data=0000003/0000033 loss=2.23971±0.00198 acc=57.10±1.26% t=00:00:16 ETA=00:02:41 0.16.958.451 I epoch 0 lr=1e-30
+GRAD-PROBE iter=4 params=290 nonfinite=0 unread=0 max|grad|=5.32703 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [▉       ] data=0000004/0000033 loss=2.21833±0.02142 acc=57.62±1.09% t=00:00:21 ETA=00:02:32 0.21.858.543 I epoch 0 lr=1e-30
+GRAD-PROBE iter=5 params=290 nonfinite=0 unread=0 max|grad|=7.25301 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█▏      ] data=0000005/0000033 loss=2.20948±0.01881 acc=57.66±0.98% t=00:00:25 ETA=00:02:25 0.26.770.117 I epoch 0 lr=1e-30
+GRAD-PROBE iter=6 params=290 nonfinite=0 unread=0 max|grad|=8.97194 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█▍      ] data=0000006/0000033 loss=2.21776±0.01744 acc=57.88±0.89% t=00:00:30 ETA=00:02:19 0.31.714.213 I epoch 0 lr=1e-30
+GRAD-PROBE iter=7 params=290 nonfinite=0 unread=0 max|grad|=10.4458 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█▋      ] data=0000007/0000033 loss=2.20936±0.01697 acc=57.87±0.82% t=00:00:36 ETA=00:02:14 0.37.006.302 I epoch 0 lr=1e-30
+GRAD-PROBE iter=8 params=290 nonfinite=0 unread=0 max|grad|=12.1758 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█▉      ] data=0000008/0000033 loss=2.20674±0.01493 acc=57.86±0.77% t=00:00:41 ETA=00:02:08 0.41.974.878 I epoch 0 lr=1e-30
+GRAD-PROBE iter=9 params=290 nonfinite=0 unread=0 max|grad|=13.4071 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██▏     ] data=0000009/0000033 loss=2.20379±0.01349 acc=57.83±0.73% t=00:00:46 ETA=00:02:04 0.47.340.286 I epoch 0 lr=1e-30
+GRAD-PROBE iter=10 params=290 nonfinite=0 unread=0 max|grad|=14.726 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██▍     ] data=0000010/0000033 loss=2.21088±0.01399 acc=57.66±0.69% t=00:00:51 ETA=00:01:59 0.52.582.733 I epoch 0 lr=1e-30
+GRAD-PROBE iter=11 params=290 nonfinite=0 unread=0 max|grad|=16.5598 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██▋     ] data=0000011/0000033 loss=2.20933±0.01275 acc=57.74±0.66% t=00:00:56 ETA=00:01:53 0.57.540.810 I epoch 0 lr=1e-30
+GRAD-PROBE iter=12 params=290 nonfinite=0 unread=0 max|grad|=17.9604 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██▉     ] data=0000012/0000033 loss=2.21230±0.01202 acc=57.71±0.63% t=00:01:01 ETA=00:01:47 1.02.513.637 I epoch 0 lr=1e-30
+GRAD-PROBE iter=13 params=290 nonfinite=0 unread=0 max|grad|=20.0516 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███▏    ] data=0000013/0000033 loss=2.20178±0.01526 acc=57.93±0.61% t=00:01:06 ETA=00:01:42 1.07.479.811 I epoch 0 lr=1e-30
+GRAD-PROBE iter=14 params=290 nonfinite=0 unread=0 max|grad|=21.8024 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███▍    ] data=0000014/0000033 loss=2.20674±0.01497 acc=57.85±0.58% t=00:01:11 ETA=00:01:37 1.12.457.948 I epoch 0 lr=1e-30
+GRAD-PROBE iter=15 params=290 nonfinite=0 unread=0 max|grad|=23.5832 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███▋    ] data=0000015/0000033 loss=2.20638±0.01394 acc=57.93±0.56% t=00:01:16 ETA=00:01:31 1.17.403.272 I epoch 0 lr=1e-30
+GRAD-PROBE iter=16 params=290 nonfinite=0 unread=0 max|grad|=25.0761 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███▉    ] data=0000016/0000033 loss=2.21023±0.01360 acc=57.97±0.55% t=00:01:21 ETA=00:01:26 1.22.694.520 I epoch 0 lr=1e-30
+GRAD-PROBE iter=17 params=290 nonfinite=0 unread=0 max|grad|=26.698 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [████    ] data=0000017/0000033 loss=2.21125±0.01282 acc=57.96±0.53% t=00:01:26 ETA=00:01:21 1.27.595.112 I epoch 0 lr=1e-30
+GRAD-PROBE iter=18 params=290 nonfinite=0 unread=0 max|grad|=28.6717 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [████▎   ] data=0000018/0000033 loss=2.20898±0.01229 acc=57.96±0.51% t=00:01:31 ETA=00:01:16 1.32.533.020 I epoch 0 lr=1e-30
+GRAD-PROBE iter=19 params=290 nonfinite=0 unread=0 max|grad|=31.0279 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [████▌   ] data=0000019/0000033 loss=2.20831±0.01165 acc=57.96±0.50% t=00:01:36 ETA=00:01:11 1.37.439.035 I epoch 0 lr=1e-30
+GRAD-PROBE iter=20 params=290 nonfinite=0 unread=0 max|grad|=32.6849 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [████▊   ] data=0000020/0000033 loss=2.20767±0.01107 acc=57.98±0.49% t=00:01:41 ETA=00:01:06 1.42.363.301 I epoch 0 lr=1e-30
+GRAD-PROBE iter=21 params=290 nonfinite=0 unread=0 max|grad|=34.052 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█████   ] data=0000021/0000033 loss=2.20617±0.01063 acc=58.00±0.48% t=00:01:46 ETA=00:01:00 1.47.484.091 I epoch 0 lr=1e-30
+GRAD-PROBE iter=22 params=290 nonfinite=0 unread=0 max|grad|=35.7091 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█████▎  ] data=0000022/0000033 loss=2.20840±0.01038 acc=57.94±0.47% t=00:01:51 ETA=00:00:55 1.52.403.614 I epoch 0 lr=1e-30
+GRAD-PROBE iter=23 params=290 nonfinite=0 unread=0 max|grad|=36.6034 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█████▌  ] data=0000023/0000033 loss=2.20955±0.00999 acc=57.90±0.45% t=00:01:56 ETA=00:00:50 1.57.316.308 I epoch 0 lr=1e-30
+GRAD-PROBE iter=24 params=290 nonfinite=0 unread=0 max|grad|=38.0459 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [█████▊  ] data=0000024/0000033 loss=2.21332±0.01028 acc=57.84±0.45% t=00:02:01 ETA=00:00:45 2.02.276.305 I epoch 0 lr=1e-30
+GRAD-PROBE iter=25 params=290 nonfinite=0 unread=0 max|grad|=39.9671 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██████  ] data=0000025/0000033 loss=2.21515±0.01003 acc=57.77±0.44% t=00:02:06 ETA=00:00:40 2.07.494.671 I epoch 0 lr=1e-30
+GRAD-PROBE iter=26 params=290 nonfinite=0 unread=0 max|grad|=41.5829 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██████▎ ] data=0000026/0000033 loss=2.21472±0.00964 acc=57.73±0.43% t=00:02:11 ETA=00:00:35 2.12.428.226 I epoch 0 lr=1e-30
+GRAD-PROBE iter=27 params=290 nonfinite=0 unread=0 max|grad|=43.3686 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██████▌ ] data=0000027/0000033 loss=2.21558±0.00932 acc=57.71±0.42% t=00:02:16 ETA=00:00:30 2.17.331.328 I epoch 0 lr=1e-30
+GRAD-PROBE iter=28 params=290 nonfinite=0 unread=0 max|grad|=45.1984 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [██████▊ ] data=0000028/0000033 loss=2.21363±0.00919 acc=57.78±0.41% t=00:02:21 ETA=00:00:25 2.22.255.700 I epoch 0 lr=1e-30
+GRAD-PROBE iter=29 params=290 nonfinite=0 unread=0 max|grad|=46.9042 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███████ ] data=0000029/0000033 loss=2.21796±0.00986 acc=57.77±0.41% t=00:02:26 ETA=00:00:20 2.27.151.849 I epoch 0 lr=1e-30
+GRAD-PROBE iter=30 params=290 nonfinite=0 unread=0 max|grad|=48.2062 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███████▎] data=0000030/0000033 loss=2.22134±0.01011 acc=57.70±0.40% t=00:02:31 ETA=00:00:15 2.32.085.310 I epoch 0 lr=1e-30
+GRAD-PROBE iter=31 params=290 nonfinite=0 unread=0 max|grad|=49.8451 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███████▌] data=0000031/0000033 loss=2.22194±0.00980 acc=57.62±0.39% t=00:02:36 ETA=00:00:10 2.37.050.466 I epoch 0 lr=1e-30
+GRAD-PROBE iter=32 params=290 nonfinite=0 unread=0 max|grad|=51.2534 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███████▊] data=0000032/0000033 loss=2.22392±0.00969 acc=57.59±0.39% t=00:02:41 ETA=00:00:05 2.41.991.631 I epoch 0 lr=1e-30
+GRAD-PROBE iter=33 params=290 nonfinite=0 unread=0 max|grad|=53.093 on output.weight | max|w|=214 on blk.8.attn_k.bias
+train: [███████▉] data=0000033/0000033 loss=2.22628±0.00968 acc=57.55±0.38% t=00:02:46 ETA=00:00:00 
+val:   [███▉    ] data=0000001/0000002 loss=2.00888±nan acc=60.55±2.16% t=00:00:00 ETA=00:00:00 val:   [███████▉] data=0000002/0000002 loss=2.15276±0.14388 acc=59.38±1.54% t=00:00:01 ETA=00:00:00 
+

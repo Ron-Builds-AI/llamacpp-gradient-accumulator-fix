@@ -1,0 +1,939 @@
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.003.076 I main: forcing load_mode = none to enable writable pointers to the weights
+0.00.003.079 I main: force changing k cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.003.079 I main: force changing v cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.006.163 W load: bad special token: 'tokenizer.ggml.seperator_token_id' = 4294967295, using default id -1
+0.00.006.168 W load: bad special token: 'tokenizer.ggml.padding_token_id' = 4294967295, using default id -1
+0.00.008.650 I cmn          init: llama threadpool init, n_threads = 6
+0.00.009.294 I 
+0.00.009.305 I system_info: n_threads = 6 (n_threads_batch = 6) / 32 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | AVX512 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.015.096 I -optimizer adamw -lr0 1e-30 -wd 0 -lr-min -1 -min-epochs -1 -epochs 1 -period 1 -val 0.05
+0.00.016.158 I epoch 0 lr=1e-30
+GRAD-PROBE iter=1 params=47 nonfinite=0 unread=0 max|grad|=0.400439 on blk.0.ffn_down.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000001/0000462 loss=3.70681±nan acc=24.22±3.80% t=00:00:00 ETA=00:00:03 0.00.023.566 I epoch 0 lr=1e-30
+GRAD-PROBE iter=2 params=47 nonfinite=0 unread=0 max|grad|=0.52372 on blk.0.ffn_down.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000002/0000462 loss=3.41551±0.29129 acc=28.91±2.84% t=00:00:00 ETA=00:00:03 0.00.030.100 I epoch 0 lr=1e-30
+GRAD-PROBE iter=3 params=47 nonfinite=0 unread=0 max|grad|=0.743372 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000003/0000462 loss=3.31736±0.19473 acc=29.69±2.33% t=00:00:00 ETA=00:00:03 0.00.036.522 I epoch 0 lr=1e-30
+GRAD-PROBE iter=4 params=47 nonfinite=0 unread=0 max|grad|=0.968438 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000004/0000462 loss=3.17531±0.19783 acc=30.08±2.03% t=00:00:00 ETA=00:00:03 0.00.043.024 I epoch 0 lr=1e-30
+GRAD-PROBE iter=5 params=47 nonfinite=0 unread=0 max|grad|=1.26856 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000005/0000462 loss=3.11530±0.16457 acc=30.00±1.81% t=00:00:00 ETA=00:00:03 0.00.049.649 I epoch 0 lr=1e-30
+GRAD-PROBE iter=6 params=47 nonfinite=0 unread=0 max|grad|=1.3129 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000006/0000462 loss=3.12851±0.13502 acc=29.30±1.64% t=00:00:00 ETA=00:00:03 0.00.056.261 I epoch 0 lr=1e-30
+GRAD-PROBE iter=7 params=47 nonfinite=0 unread=0 max|grad|=1.36995 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [        ] data=0000007/0000462 loss=3.13244±0.11418 acc=28.57±1.51% t=00:00:00 ETA=00:00:03 0.00.062.765 I epoch 0 lr=1e-30
+GRAD-PROBE iter=8 params=47 nonfinite=0 unread=0 max|grad|=1.46572 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000008/0000462 loss=3.14218±0.09936 acc=28.61±1.41% t=00:00:00 ETA=00:00:03 0.00.069.295 I epoch 0 lr=1e-30
+GRAD-PROBE iter=9 params=47 nonfinite=0 unread=0 max|grad|=1.75884 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000009/0000462 loss=3.16987±0.09190 acc=28.47±1.33% t=00:00:00 ETA=00:00:03 0.00.075.764 I epoch 0 lr=1e-30
+GRAD-PROBE iter=10 params=47 nonfinite=0 unread=0 max|grad|=2.01019 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000010/0000462 loss=3.20220±0.08833 acc=28.20±1.26% t=00:00:00 ETA=00:00:03 0.00.082.352 I epoch 0 lr=1e-30
+GRAD-PROBE iter=11 params=47 nonfinite=0 unread=0 max|grad|=2.26962 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000011/0000462 loss=3.23758±0.08738 acc=27.77±1.19% t=00:00:00 ETA=00:00:03 0.00.088.852 I epoch 0 lr=1e-30
+GRAD-PROBE iter=12 params=47 nonfinite=0 unread=0 max|grad|=2.44388 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000012/0000462 loss=3.22774±0.08037 acc=27.73±1.14% t=00:00:00 ETA=00:00:02 0.00.095.453 I epoch 0 lr=1e-30
+GRAD-PROBE iter=13 params=47 nonfinite=0 unread=0 max|grad|=2.63815 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000013/0000462 loss=3.22660±0.07394 acc=27.58±1.10% t=00:00:00 ETA=00:00:02 0.00.101.988 I epoch 0 lr=1e-30
+GRAD-PROBE iter=14 params=47 nonfinite=0 unread=0 max|grad|=2.76091 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▏       ] data=0000014/0000462 loss=3.24119±0.06999 acc=27.79±1.06% t=00:00:00 ETA=00:00:02 0.00.108.519 I epoch 0 lr=1e-30
+GRAD-PROBE iter=15 params=47 nonfinite=0 unread=0 max|grad|=2.90099 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000015/0000462 loss=3.26283±0.06866 acc=27.97±1.02% t=00:00:00 ETA=00:00:02 0.00.115.038 I epoch 0 lr=1e-30
+GRAD-PROBE iter=16 params=47 nonfinite=0 unread=0 max|grad|=3.40522 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000016/0000462 loss=3.25350±0.06490 acc=28.08±0.99% t=00:00:00 ETA=00:00:02 0.00.121.623 I epoch 0 lr=1e-30
+GRAD-PROBE iter=17 params=47 nonfinite=0 unread=0 max|grad|=3.90037 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000017/0000462 loss=3.24824±0.06119 acc=28.08±0.96% t=00:00:00 ETA=00:00:02 0.00.128.114 I epoch 0 lr=1e-30
+GRAD-PROBE iter=18 params=47 nonfinite=0 unread=0 max|grad|=3.86812 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000018/0000462 loss=3.23700±0.05877 acc=28.39±0.94% t=00:00:00 ETA=00:00:02 0.00.134.672 I epoch 0 lr=1e-30
+GRAD-PROBE iter=19 params=47 nonfinite=0 unread=0 max|grad|=3.89942 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000019/0000462 loss=3.23520±0.05562 acc=28.54±0.92% t=00:00:00 ETA=00:00:02 0.00.141.114 I epoch 0 lr=1e-30
+GRAD-PROBE iter=20 params=47 nonfinite=0 unread=0 max|grad|=4.00044 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000020/0000462 loss=3.20893±0.05895 acc=29.10±0.90% t=00:00:00 ETA=00:00:02 0.00.147.715 I epoch 0 lr=1e-30
+GRAD-PROBE iter=21 params=47 nonfinite=0 unread=0 max|grad|=4.07367 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▎       ] data=0000021/0000462 loss=3.19301±0.05828 acc=29.50±0.88% t=00:00:00 ETA=00:00:02 0.00.154.166 I epoch 0 lr=1e-30
+GRAD-PROBE iter=22 params=47 nonfinite=0 unread=0 max|grad|=4.26755 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000022/0000462 loss=3.18885±0.05573 acc=29.37±0.86% t=00:00:00 ETA=00:00:02 0.00.160.628 I epoch 0 lr=1e-30
+GRAD-PROBE iter=23 params=47 nonfinite=0 unread=0 max|grad|=4.46016 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000023/0000462 loss=3.19030±0.05327 acc=29.31±0.84% t=00:00:00 ETA=00:00:02 0.00.167.010 I epoch 0 lr=1e-30
+GRAD-PROBE iter=24 params=47 nonfinite=0 unread=0 max|grad|=4.7091 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000024/0000462 loss=3.20424±0.05287 acc=29.30±0.82% t=00:00:00 ETA=00:00:02 0.00.173.486 I epoch 0 lr=1e-30
+GRAD-PROBE iter=25 params=47 nonfinite=0 unread=0 max|grad|=4.96643 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000025/0000462 loss=3.21820±0.05260 acc=29.28±0.80% t=00:00:00 ETA=00:00:02 0.00.179.875 I epoch 0 lr=1e-30
+GRAD-PROBE iter=26 params=47 nonfinite=0 unread=0 max|grad|=5.12475 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000026/0000462 loss=3.20994±0.05121 acc=29.27±0.79% t=00:00:00 ETA=00:00:02 0.00.186.325 I epoch 0 lr=1e-30
+GRAD-PROBE iter=27 params=47 nonfinite=0 unread=0 max|grad|=5.30434 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000027/0000462 loss=3.20409±0.04962 acc=29.11±0.77% t=00:00:00 ETA=00:00:02 0.00.192.758 I epoch 0 lr=1e-30
+GRAD-PROBE iter=28 params=47 nonfinite=0 unread=0 max|grad|=5.54241 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▍       ] data=0000028/0000462 loss=3.20422±0.04781 acc=29.13±0.76% t=00:00:00 ETA=00:00:02 0.00.199.238 I epoch 0 lr=1e-30
+GRAD-PROBE iter=29 params=47 nonfinite=0 unread=0 max|grad|=5.78028 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000029/0000462 loss=3.20975±0.04646 acc=29.04±0.75% t=00:00:00 ETA=00:00:02 0.00.205.654 I epoch 0 lr=1e-30
+GRAD-PROBE iter=30 params=47 nonfinite=0 unread=0 max|grad|=6.0718 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000030/0000462 loss=3.20172±0.04560 acc=29.27±0.73% t=00:00:00 ETA=00:00:02 0.00.212.133 I epoch 0 lr=1e-30
+GRAD-PROBE iter=31 params=47 nonfinite=0 unread=0 max|grad|=6.38271 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000031/0000462 loss=3.19628±0.04444 acc=29.46±0.72% t=00:00:00 ETA=00:00:02 0.00.219.106 I epoch 0 lr=1e-30
+GRAD-PROBE iter=32 params=47 nonfinite=0 unread=0 max|grad|=6.65655 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000032/0000462 loss=3.21035±0.04527 acc=29.49±0.71% t=00:00:00 ETA=00:00:02 0.00.225.590 I epoch 0 lr=1e-30
+GRAD-PROBE iter=33 params=47 nonfinite=0 unread=0 max|grad|=6.93678 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000033/0000462 loss=3.22643±0.04673 acc=29.45±0.70% t=00:00:00 ETA=00:00:02 0.00.231.991 I epoch 0 lr=1e-30
+GRAD-PROBE iter=34 params=47 nonfinite=0 unread=0 max|grad|=7.16679 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000034/0000462 loss=3.22372±0.04542 acc=29.53±0.69% t=00:00:00 ETA=00:00:02 0.00.238.488 I epoch 0 lr=1e-30
+GRAD-PROBE iter=35 params=47 nonfinite=0 unread=0 max|grad|=7.42503 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000035/0000462 loss=3.22313±0.04410 acc=29.53±0.68% t=00:00:00 ETA=00:00:02 0.00.244.897 I epoch 0 lr=1e-30
+GRAD-PROBE iter=36 params=47 nonfinite=0 unread=0 max|grad|=7.50754 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▌       ] data=0000036/0000462 loss=3.21932±0.04303 acc=29.67±0.67% t=00:00:00 ETA=00:00:02 0.00.251.497 I epoch 0 lr=1e-30
+GRAD-PROBE iter=37 params=47 nonfinite=0 unread=0 max|grad|=7.57845 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000037/0000462 loss=3.21895±0.04185 acc=29.69±0.66% t=00:00:00 ETA=00:00:02 0.00.258.008 I epoch 0 lr=1e-30
+GRAD-PROBE iter=38 params=47 nonfinite=0 unread=0 max|grad|=8.09786 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000038/0000462 loss=3.23641±0.04432 acc=29.63±0.65% t=00:00:00 ETA=00:00:02 0.00.264.499 I epoch 0 lr=1e-30
+GRAD-PROBE iter=39 params=47 nonfinite=0 unread=0 max|grad|=8.61272 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000039/0000462 loss=3.25020±0.04532 acc=29.57±0.65% t=00:00:00 ETA=00:00:02 0.00.270.909 I epoch 0 lr=1e-30
+GRAD-PROBE iter=40 params=47 nonfinite=0 unread=0 max|grad|=8.68062 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000040/0000462 loss=3.24437±0.04455 acc=29.55±0.64% t=00:00:00 ETA=00:00:02 0.00.277.409 I epoch 0 lr=1e-30
+GRAD-PROBE iter=41 params=47 nonfinite=0 unread=0 max|grad|=8.80494 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000041/0000462 loss=3.24105±0.04358 acc=29.54±0.63% t=00:00:00 ETA=00:00:02 0.00.283.960 I epoch 0 lr=1e-30
+GRAD-PROBE iter=42 params=47 nonfinite=0 unread=0 max|grad|=9.05631 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000042/0000462 loss=3.23457±0.04302 acc=29.71±0.62% t=00:00:00 ETA=00:00:02 0.00.290.493 I epoch 0 lr=1e-30
+GRAD-PROBE iter=43 params=47 nonfinite=0 unread=0 max|grad|=9.30865 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▋       ] data=0000043/0000462 loss=3.23131±0.04213 acc=29.81±0.62% t=00:00:00 ETA=00:00:02 0.00.296.933 I epoch 0 lr=1e-30
+GRAD-PROBE iter=44 params=47 nonfinite=0 unread=0 max|grad|=9.66251 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000044/0000462 loss=3.23472±0.04131 acc=29.94±0.61% t=00:00:00 ETA=00:00:02 0.00.303.421 I epoch 0 lr=1e-30
+GRAD-PROBE iter=45 params=47 nonfinite=0 unread=0 max|grad|=10.0131 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000045/0000462 loss=3.24109±0.04088 acc=29.98±0.60% t=00:00:00 ETA=00:00:02 0.00.309.839 I epoch 0 lr=1e-30
+GRAD-PROBE iter=46 params=47 nonfinite=0 unread=0 max|grad|=10.365 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000046/0000462 loss=3.24508±0.04018 acc=29.84±0.60% t=00:00:00 ETA=00:00:02 0.00.316.391 I epoch 0 lr=1e-30
+GRAD-PROBE iter=47 params=47 nonfinite=0 unread=0 max|grad|=10.6935 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000047/0000462 loss=3.24920±0.03953 acc=29.65±0.59% t=00:00:00 ETA=00:00:02 0.00.322.847 I epoch 0 lr=1e-30
+GRAD-PROBE iter=48 params=47 nonfinite=0 unread=0 max|grad|=10.9042 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000048/0000462 loss=3.24209±0.03934 acc=29.62±0.58% t=00:00:00 ETA=00:00:02 0.00.329.405 I epoch 0 lr=1e-30
+GRAD-PROBE iter=49 params=47 nonfinite=0 unread=0 max|grad|=11.156 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000049/0000462 loss=3.23664±0.03892 acc=29.59±0.58% t=00:00:00 ETA=00:00:02 0.00.335.896 I epoch 0 lr=1e-30
+GRAD-PROBE iter=50 params=47 nonfinite=0 unread=0 max|grad|=11.3799 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▊       ] data=0000050/0000462 loss=3.23375±0.03824 acc=29.64±0.57% t=00:00:00 ETA=00:00:02 0.00.342.468 I epoch 0 lr=1e-30
+GRAD-PROBE iter=51 params=47 nonfinite=0 unread=0 max|grad|=11.6285 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000051/0000462 loss=3.23300±0.03749 acc=29.75±0.57% t=00:00:00 ETA=00:00:02 0.00.348.983 I epoch 0 lr=1e-30
+GRAD-PROBE iter=52 params=47 nonfinite=0 unread=0 max|grad|=11.8893 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000052/0000462 loss=3.23109±0.03681 acc=29.85±0.56% t=00:00:00 ETA=00:00:02 0.00.355.621 I epoch 0 lr=1e-30
+GRAD-PROBE iter=53 params=47 nonfinite=0 unread=0 max|grad|=12.1444 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000053/0000462 loss=3.22907±0.03617 acc=30.00±0.56% t=00:00:00 ETA=00:00:02 0.00.362.260 I epoch 0 lr=1e-30
+GRAD-PROBE iter=54 params=47 nonfinite=0 unread=0 max|grad|=12.4328 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000054/0000462 loss=3.22327±0.03596 acc=30.14±0.55% t=00:00:00 ETA=00:00:02 0.00.368.900 I epoch 0 lr=1e-30
+GRAD-PROBE iter=55 params=47 nonfinite=0 unread=0 max|grad|=12.7349 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000055/0000462 loss=3.21874±0.03559 acc=30.24±0.55% t=00:00:00 ETA=00:00:02 0.00.375.336 I epoch 0 lr=1e-30
+GRAD-PROBE iter=56 params=47 nonfinite=0 unread=0 max|grad|=12.8378 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000056/0000462 loss=3.21619±0.03504 acc=30.25±0.54% t=00:00:00 ETA=00:00:02 0.00.381.792 I epoch 0 lr=1e-30
+GRAD-PROBE iter=57 params=47 nonfinite=0 unread=0 max|grad|=13.003 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [▉       ] data=0000057/0000462 loss=3.21483±0.03445 acc=30.30±0.54% t=00:00:00 ETA=00:00:02 0.00.388.327 I epoch 0 lr=1e-30
+GRAD-PROBE iter=58 params=47 nonfinite=0 unread=0 max|grad|=13.261 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000058/0000462 loss=3.21306±0.03390 acc=30.32±0.53% t=00:00:00 ETA=00:00:02 0.00.394.872 I epoch 0 lr=1e-30
+GRAD-PROBE iter=59 params=47 nonfinite=0 unread=0 max|grad|=13.5329 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000059/0000462 loss=3.21389±0.03333 acc=30.30±0.53% t=00:00:00 ETA=00:00:02 0.00.401.333 I epoch 0 lr=1e-30
+GRAD-PROBE iter=60 params=47 nonfinite=0 unread=0 max|grad|=13.5968 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000060/0000462 loss=3.21058±0.03293 acc=30.36±0.52% t=00:00:00 ETA=00:00:02 0.00.407.920 I epoch 0 lr=1e-30
+GRAD-PROBE iter=61 params=47 nonfinite=0 unread=0 max|grad|=13.6518 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000061/0000462 loss=3.20936±0.03241 acc=30.38±0.52% t=00:00:00 ETA=00:00:02 0.00.414.351 I epoch 0 lr=1e-30
+GRAD-PROBE iter=62 params=47 nonfinite=0 unread=0 max|grad|=13.7996 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000062/0000462 loss=3.20745±0.03194 acc=30.42±0.52% t=00:00:00 ETA=00:00:02 0.00.420.911 I epoch 0 lr=1e-30
+GRAD-PROBE iter=63 params=47 nonfinite=0 unread=0 max|grad|=13.9448 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000063/0000462 loss=3.20765±0.03143 acc=30.38±0.51% t=00:00:00 ETA=00:00:02 0.00.427.309 I epoch 0 lr=1e-30
+GRAD-PROBE iter=64 params=47 nonfinite=0 unread=0 max|grad|=14.1622 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█       ] data=0000064/0000462 loss=3.20575±0.03099 acc=30.32±0.51% t=00:00:00 ETA=00:00:02 0.00.433.818 I epoch 0 lr=1e-30
+GRAD-PROBE iter=65 params=47 nonfinite=0 unread=0 max|grad|=14.4064 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000065/0000462 loss=3.20575±0.03051 acc=30.25±0.50% t=00:00:00 ETA=00:00:02 0.00.440.325 I epoch 0 lr=1e-30
+GRAD-PROBE iter=66 params=47 nonfinite=0 unread=0 max|grad|=14.6229 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000066/0000462 loss=3.20542±0.03005 acc=30.22±0.50% t=00:00:00 ETA=00:00:02 0.00.446.906 I epoch 0 lr=1e-30
+GRAD-PROBE iter=67 params=47 nonfinite=0 unread=0 max|grad|=14.8431 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000067/0000462 loss=3.20609±0.02960 acc=30.12±0.50% t=00:00:00 ETA=00:00:02 0.00.453.428 I epoch 0 lr=1e-30
+GRAD-PROBE iter=68 params=47 nonfinite=0 unread=0 max|grad|=15.1399 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000068/0000462 loss=3.21032±0.02947 acc=30.11±0.49% t=00:00:00 ETA=00:00:02 0.00.460.239 I epoch 0 lr=1e-30
+GRAD-PROBE iter=69 params=47 nonfinite=0 unread=0 max|grad|=15.4649 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000069/0000462 loss=3.21519±0.02945 acc=30.08±0.49% t=00:00:00 ETA=00:00:02 0.00.466.842 I epoch 0 lr=1e-30
+GRAD-PROBE iter=70 params=47 nonfinite=0 unread=0 max|grad|=15.5419 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000070/0000462 loss=3.21413±0.02904 acc=30.12±0.48% t=00:00:00 ETA=00:00:02 0.00.473.416 I epoch 0 lr=1e-30
+GRAD-PROBE iter=71 params=47 nonfinite=0 unread=0 max|grad|=15.6262 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000071/0000462 loss=3.21479±0.02864 acc=30.13±0.48% t=00:00:00 ETA=00:00:02 0.00.479.986 I epoch 0 lr=1e-30
+GRAD-PROBE iter=72 params=47 nonfinite=0 unread=0 max|grad|=15.8903 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▏      ] data=0000072/0000462 loss=3.21931±0.02860 acc=30.10±0.48% t=00:00:00 ETA=00:00:02 0.00.486.593 I epoch 0 lr=1e-30
+GRAD-PROBE iter=73 params=47 nonfinite=0 unread=0 max|grad|=16.1674 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000073/0000462 loss=3.22405±0.02860 acc=30.04±0.47% t=00:00:00 ETA=00:00:02 0.00.493.106 I epoch 0 lr=1e-30
+GRAD-PROBE iter=74 params=47 nonfinite=0 unread=0 max|grad|=16.2508 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000074/0000462 loss=3.22509±0.02823 acc=29.98±0.47% t=00:00:00 ETA=00:00:02 0.00.499.679 I epoch 0 lr=1e-30
+GRAD-PROBE iter=75 params=47 nonfinite=0 unread=0 max|grad|=16.3662 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000075/0000462 loss=3.22707±0.02792 acc=29.92±0.47% t=00:00:00 ETA=00:00:02 0.00.506.216 I epoch 0 lr=1e-30
+GRAD-PROBE iter=76 params=47 nonfinite=0 unread=0 max|grad|=16.4082 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000076/0000462 loss=3.22421±0.02770 acc=29.97±0.46% t=00:00:00 ETA=00:00:02 0.00.512.818 I epoch 0 lr=1e-30
+GRAD-PROBE iter=77 params=47 nonfinite=0 unread=0 max|grad|=16.4834 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000077/0000462 loss=3.22358±0.02734 acc=29.98±0.46% t=00:00:00 ETA=00:00:02 0.00.519.296 I epoch 0 lr=1e-30
+GRAD-PROBE iter=78 params=47 nonfinite=0 unread=0 max|grad|=16.7236 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000078/0000462 loss=3.22223±0.02702 acc=30.01±0.46% t=00:00:00 ETA=00:00:02 0.00.525.834 I epoch 0 lr=1e-30
+GRAD-PROBE iter=79 params=47 nonfinite=0 unread=0 max|grad|=16.9685 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▎      ] data=0000079/0000462 loss=3.22138±0.02669 acc=30.00±0.46% t=00:00:00 ETA=00:00:02 0.00.532.350 I epoch 0 lr=1e-30
+GRAD-PROBE iter=80 params=47 nonfinite=0 unread=0 max|grad|=16.9768 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000080/0000462 loss=3.21768±0.02661 acc=30.05±0.45% t=00:00:00 ETA=00:00:02 0.00.538.982 I epoch 0 lr=1e-30
+GRAD-PROBE iter=81 params=47 nonfinite=0 unread=0 max|grad|=17.0049 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000081/0000462 loss=3.21508±0.02641 acc=30.09±0.45% t=00:00:00 ETA=00:00:02 0.00.545.527 I epoch 0 lr=1e-30
+GRAD-PROBE iter=82 params=47 nonfinite=0 unread=0 max|grad|=17.3626 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000082/0000462 loss=3.21322±0.02615 acc=30.14±0.45% t=00:00:00 ETA=00:00:02 0.00.552.122 I epoch 0 lr=1e-30
+GRAD-PROBE iter=83 params=47 nonfinite=0 unread=0 max|grad|=17.689 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000083/0000462 loss=3.21337±0.02584 acc=30.10±0.45% t=00:00:00 ETA=00:00:02 0.00.558.695 I epoch 0 lr=1e-30
+GRAD-PROBE iter=84 params=47 nonfinite=0 unread=0 max|grad|=17.8828 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000084/0000462 loss=3.21410±0.02554 acc=30.17±0.44% t=00:00:00 ETA=00:00:02 0.00.565.316 I epoch 0 lr=1e-30
+GRAD-PROBE iter=85 params=47 nonfinite=0 unread=0 max|grad|=18.0755 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000085/0000462 loss=3.21469±0.02524 acc=30.23±0.44% t=00:00:00 ETA=00:00:02 0.00.571.972 I epoch 0 lr=1e-30
+GRAD-PROBE iter=86 params=47 nonfinite=0 unread=0 max|grad|=18.1106 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▍      ] data=0000086/0000462 loss=3.21606±0.02499 acc=30.31±0.44% t=00:00:00 ETA=00:00:02 0.00.578.685 I epoch 0 lr=1e-30
+GRAD-PROBE iter=87 params=47 nonfinite=0 unread=0 max|grad|=18.1867 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000087/0000462 loss=3.21951±0.02494 acc=30.34±0.44% t=00:00:00 ETA=00:00:02 0.00.585.278 I epoch 0 lr=1e-30
+GRAD-PROBE iter=88 params=47 nonfinite=0 unread=0 max|grad|=18.4375 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000088/0000462 loss=3.21396±0.02527 acc=30.28±0.43% t=00:00:00 ETA=00:00:02 0.00.591.874 I epoch 0 lr=1e-30
+GRAD-PROBE iter=89 params=47 nonfinite=0 unread=0 max|grad|=18.7022 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000089/0000462 loss=3.20897±0.02548 acc=30.27±0.43% t=00:00:00 ETA=00:00:02 0.00.598.380 I epoch 0 lr=1e-30
+GRAD-PROBE iter=90 params=47 nonfinite=0 unread=0 max|grad|=19.0208 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000090/0000462 loss=3.21247±0.02543 acc=30.30±0.43% t=00:00:00 ETA=00:00:02 0.00.605.046 I epoch 0 lr=1e-30
+GRAD-PROBE iter=91 params=47 nonfinite=0 unread=0 max|grad|=19.3443 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000091/0000462 loss=3.21722±0.02560 acc=30.35±0.43% t=00:00:00 ETA=00:00:02 0.00.611.561 I epoch 0 lr=1e-30
+GRAD-PROBE iter=92 params=47 nonfinite=0 unread=0 max|grad|=19.7242 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000092/0000462 loss=3.21449±0.02546 acc=30.40±0.42% t=00:00:00 ETA=00:00:02 0.00.618.112 I epoch 0 lr=1e-30
+GRAD-PROBE iter=93 params=47 nonfinite=0 unread=0 max|grad|=20.0693 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▌      ] data=0000093/0000462 loss=3.21284±0.02524 acc=30.44±0.42% t=00:00:00 ETA=00:00:02 0.00.624.627 I epoch 0 lr=1e-30
+GRAD-PROBE iter=94 params=47 nonfinite=0 unread=0 max|grad|=20.1311 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000094/0000462 loss=3.21425±0.02501 acc=30.40±0.42% t=00:00:00 ETA=00:00:02 0.00.631.204 I epoch 0 lr=1e-30
+GRAD-PROBE iter=95 params=47 nonfinite=0 unread=0 max|grad|=20.2359 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000095/0000462 loss=3.21620±0.02482 acc=30.38±0.42% t=00:00:00 ETA=00:00:02 0.00.637.715 I epoch 0 lr=1e-30
+GRAD-PROBE iter=96 params=47 nonfinite=0 unread=0 max|grad|=20.5503 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000096/0000462 loss=3.21453±0.02462 acc=30.42±0.42% t=00:00:00 ETA=00:00:02 0.00.644.224 I epoch 0 lr=1e-30
+GRAD-PROBE iter=97 params=47 nonfinite=0 unread=0 max|grad|=20.8616 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000097/0000462 loss=3.21368±0.02438 acc=30.44±0.41% t=00:00:00 ETA=00:00:02 0.00.650.724 I epoch 0 lr=1e-30
+GRAD-PROBE iter=98 params=47 nonfinite=0 unread=0 max|grad|=21.0104 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000098/0000462 loss=3.21405±0.02413 acc=30.44±0.41% t=00:00:00 ETA=00:00:02 0.00.657.259 I epoch 0 lr=1e-30
+GRAD-PROBE iter=99 params=47 nonfinite=0 unread=0 max|grad|=21.1965 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000099/0000462 loss=3.21480±0.02390 acc=30.43±0.41% t=00:00:00 ETA=00:00:02 0.00.663.729 I epoch 0 lr=1e-30
+GRAD-PROBE iter=100 params=47 nonfinite=0 unread=0 max|grad|=21.4464 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000100/0000462 loss=3.21513±0.02366 acc=30.45±0.41% t=00:00:00 ETA=00:00:02 0.00.670.217 I epoch 0 lr=1e-30
+GRAD-PROBE iter=101 params=47 nonfinite=0 unread=0 max|grad|=21.6843 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▋      ] data=0000101/0000462 loss=3.21565±0.02343 acc=30.45±0.40% t=00:00:00 ETA=00:00:02 0.00.676.749 I epoch 0 lr=1e-30
+GRAD-PROBE iter=102 params=47 nonfinite=0 unread=0 max|grad|=21.9258 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000102/0000462 loss=3.21350±0.02330 acc=30.47±0.40% t=00:00:00 ETA=00:00:02 0.00.683.384 I epoch 0 lr=1e-30
+GRAD-PROBE iter=103 params=47 nonfinite=0 unread=0 max|grad|=22.1795 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000103/0000462 loss=3.21226±0.02311 acc=30.48±0.40% t=00:00:00 ETA=00:00:02 0.00.689.865 I epoch 0 lr=1e-30
+GRAD-PROBE iter=104 params=47 nonfinite=0 unread=0 max|grad|=22.5558 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000104/0000462 loss=3.21291±0.02289 acc=30.47±0.40% t=00:00:00 ETA=00:00:02 0.00.696.363 I epoch 0 lr=1e-30
+GRAD-PROBE iter=105 params=47 nonfinite=0 unread=0 max|grad|=22.9336 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000105/0000462 loss=3.21411±0.02271 acc=30.40±0.40% t=00:00:00 ETA=00:00:02 0.00.702.829 I epoch 0 lr=1e-30
+GRAD-PROBE iter=106 params=47 nonfinite=0 unread=0 max|grad|=23.2287 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000106/0000462 loss=3.21761±0.02276 acc=30.40±0.39% t=00:00:00 ETA=00:00:02 0.00.709.364 I epoch 0 lr=1e-30
+GRAD-PROBE iter=107 params=47 nonfinite=0 unread=0 max|grad|=23.5451 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000107/0000462 loss=3.22170±0.02292 acc=30.33±0.39% t=00:00:00 ETA=00:00:02 0.00.715.846 I epoch 0 lr=1e-30
+GRAD-PROBE iter=108 params=47 nonfinite=0 unread=0 max|grad|=23.6553 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▊      ] data=0000108/0000462 loss=3.22451±0.02288 acc=30.34±0.39% t=00:00:00 ETA=00:00:02 0.00.722.348 I epoch 0 lr=1e-30
+GRAD-PROBE iter=109 params=47 nonfinite=0 unread=0 max|grad|=23.7905 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000109/0000462 loss=3.22742±0.02285 acc=30.30±0.39% t=00:00:00 ETA=00:00:02 0.00.728.761 I epoch 0 lr=1e-30
+GRAD-PROBE iter=110 params=47 nonfinite=0 unread=0 max|grad|=23.9477 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000110/0000462 loss=3.23224±0.02315 acc=30.24±0.39% t=00:00:00 ETA=00:00:02 0.00.735.241 I epoch 0 lr=1e-30
+GRAD-PROBE iter=111 params=47 nonfinite=0 unread=0 max|grad|=24.1389 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000111/0000462 loss=3.23779±0.02360 acc=30.17±0.39% t=00:00:00 ETA=00:00:02 0.00.741.669 I epoch 0 lr=1e-30
+GRAD-PROBE iter=112 params=47 nonfinite=0 unread=0 max|grad|=24.388 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000112/0000462 loss=3.23582±0.02347 acc=30.20±0.38% t=00:00:00 ETA=00:00:02 0.00.748.221 I epoch 0 lr=1e-30
+GRAD-PROBE iter=113 params=47 nonfinite=0 unread=0 max|grad|=24.6551 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000113/0000462 loss=3.23541±0.02327 acc=30.20±0.38% t=00:00:00 ETA=00:00:02 0.00.754.736 I epoch 0 lr=1e-30
+GRAD-PROBE iter=114 params=47 nonfinite=0 unread=0 max|grad|=24.8607 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000114/0000462 loss=3.23352±0.02314 acc=30.17±0.38% t=00:00:00 ETA=00:00:02 0.00.761.261 I epoch 0 lr=1e-30
+GRAD-PROBE iter=115 params=47 nonfinite=0 unread=0 max|grad|=25.0833 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█▉      ] data=0000115/0000462 loss=3.23243±0.02297 acc=30.12±0.38% t=00:00:00 ETA=00:00:02 0.00.767.697 I epoch 0 lr=1e-30
+GRAD-PROBE iter=116 params=47 nonfinite=0 unread=0 max|grad|=25.274 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000116/0000462 loss=3.23373±0.02280 acc=30.10±0.38% t=00:00:00 ETA=00:00:02 0.00.774.181 I epoch 0 lr=1e-30
+GRAD-PROBE iter=117 params=47 nonfinite=0 unread=0 max|grad|=25.448 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000117/0000462 loss=3.23584±0.02271 acc=30.09±0.37% t=00:00:00 ETA=00:00:02 0.00.780.660 I epoch 0 lr=1e-30
+GRAD-PROBE iter=118 params=47 nonfinite=0 unread=0 max|grad|=25.4804 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000118/0000462 loss=3.23788±0.02261 acc=30.08±0.37% t=00:00:00 ETA=00:00:02 0.00.787.173 I epoch 0 lr=1e-30
+GRAD-PROBE iter=119 params=47 nonfinite=0 unread=0 max|grad|=25.4997 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000119/0000462 loss=3.23990±0.02251 acc=30.05±0.37% t=00:00:00 ETA=00:00:02 0.00.793.693 I epoch 0 lr=1e-30
+GRAD-PROBE iter=120 params=47 nonfinite=0 unread=0 max|grad|=25.6837 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000120/0000462 loss=3.23991±0.02232 acc=30.03±0.37% t=00:00:00 ETA=00:00:02 0.00.800.338 I epoch 0 lr=1e-30
+GRAD-PROBE iter=121 params=47 nonfinite=0 unread=0 max|grad|=25.8804 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000121/0000462 loss=3.24075±0.02215 acc=30.03±0.37% t=00:00:00 ETA=00:00:02 0.00.806.923 I epoch 0 lr=1e-30
+GRAD-PROBE iter=122 params=47 nonfinite=0 unread=0 max|grad|=26.4426 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██      ] data=0000122/0000462 loss=3.24308±0.02209 acc=30.07±0.37% t=00:00:00 ETA=00:00:02 0.00.813.416 I epoch 0 lr=1e-30
+GRAD-PROBE iter=123 params=47 nonfinite=0 unread=0 max|grad|=26.9957 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000123/0000462 loss=3.24557±0.02205 acc=30.08±0.37% t=00:00:00 ETA=00:00:02 0.00.819.887 I epoch 0 lr=1e-30
+GRAD-PROBE iter=124 params=47 nonfinite=0 unread=0 max|grad|=27.1988 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000124/0000462 loss=3.24440±0.02190 acc=30.13±0.36% t=00:00:00 ETA=00:00:02 0.00.826.592 I epoch 0 lr=1e-30
+GRAD-PROBE iter=125 params=47 nonfinite=0 unread=0 max|grad|=27.4324 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000125/0000462 loss=3.24403±0.02173 acc=30.12±0.36% t=00:00:00 ETA=00:00:02 0.00.833.180 I epoch 0 lr=1e-30
+GRAD-PROBE iter=126 params=47 nonfinite=0 unread=0 max|grad|=27.6932 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000126/0000462 loss=3.24353±0.02156 acc=30.13±0.36% t=00:00:00 ETA=00:00:02 0.00.839.723 I epoch 0 lr=1e-30
+GRAD-PROBE iter=127 params=47 nonfinite=0 unread=0 max|grad|=27.9784 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000127/0000462 loss=3.24379±0.02139 acc=30.12±0.36% t=00:00:00 ETA=00:00:02 0.00.846.168 I epoch 0 lr=1e-30
+GRAD-PROBE iter=128 params=47 nonfinite=0 unread=0 max|grad|=28.0957 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000128/0000462 loss=3.24662±0.02141 acc=30.11±0.36% t=00:00:00 ETA=00:00:02 0.00.852.674 I epoch 0 lr=1e-30
+GRAD-PROBE iter=129 params=47 nonfinite=0 unread=0 max|grad|=28.2289 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▏     ] data=0000129/0000462 loss=3.24914±0.02140 acc=30.06±0.36% t=00:00:00 ETA=00:00:02 0.00.859.193 I epoch 0 lr=1e-30
+GRAD-PROBE iter=130 params=47 nonfinite=0 unread=0 max|grad|=28.4345 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000130/0000462 loss=3.25146±0.02136 acc=30.03±0.36% t=00:00:00 ETA=00:00:02 0.00.865.703 I epoch 0 lr=1e-30
+GRAD-PROBE iter=131 params=47 nonfinite=0 unread=0 max|grad|=28.6324 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000131/0000462 loss=3.25351±0.02129 acc=30.00±0.35% t=00:00:00 ETA=00:00:02 0.00.872.152 I epoch 0 lr=1e-30
+GRAD-PROBE iter=132 params=47 nonfinite=0 unread=0 max|grad|=29.0155 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000132/0000462 loss=3.25028±0.02138 acc=30.02±0.35% t=00:00:00 ETA=00:00:02 0.00.878.642 I epoch 0 lr=1e-30
+GRAD-PROBE iter=133 params=47 nonfinite=0 unread=0 max|grad|=29.4115 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000133/0000462 loss=3.24754±0.02139 acc=30.07±0.35% t=00:00:00 ETA=00:00:02 0.00.886.135 I epoch 0 lr=1e-30
+GRAD-PROBE iter=134 params=47 nonfinite=0 unread=0 max|grad|=29.8163 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000134/0000462 loss=3.24462±0.02143 acc=30.05±0.35% t=00:00:00 ETA=00:00:02 0.00.892.996 I epoch 0 lr=1e-30
+GRAD-PROBE iter=135 params=47 nonfinite=0 unread=0 max|grad|=30.2293 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000135/0000462 loss=3.24218±0.02141 acc=30.03±0.35% t=00:00:00 ETA=00:00:02 0.00.899.459 I epoch 0 lr=1e-30
+GRAD-PROBE iter=136 params=47 nonfinite=0 unread=0 max|grad|=30.166 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000136/0000462 loss=3.24145±0.02127 acc=30.03±0.35% t=00:00:00 ETA=00:00:02 0.00.905.972 I epoch 0 lr=1e-30
+GRAD-PROBE iter=137 params=47 nonfinite=0 unread=0 max|grad|=30.1419 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▎     ] data=0000137/0000462 loss=3.24076±0.02112 acc=30.01±0.35% t=00:00:00 ETA=00:00:02 0.00.912.398 I epoch 0 lr=1e-30
+GRAD-PROBE iter=138 params=47 nonfinite=0 unread=0 max|grad|=30.2949 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000138/0000462 loss=3.24387±0.02120 acc=30.02±0.34% t=00:00:00 ETA=00:00:02 0.00.918.894 I epoch 0 lr=1e-30
+GRAD-PROBE iter=139 params=47 nonfinite=0 unread=0 max|grad|=30.4516 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000139/0000462 loss=3.24726±0.02131 acc=30.00±0.34% t=00:00:00 ETA=00:00:02 0.00.925.347 I epoch 0 lr=1e-30
+GRAD-PROBE iter=140 params=47 nonfinite=0 unread=0 max|grad|=30.8338 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000140/0000462 loss=3.24718±0.02116 acc=29.99±0.34% t=00:00:00 ETA=00:00:02 0.00.931.902 I epoch 0 lr=1e-30
+GRAD-PROBE iter=141 params=47 nonfinite=0 unread=0 max|grad|=31.2347 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000141/0000462 loss=3.24811±0.02103 acc=29.99±0.34% t=00:00:00 ETA=00:00:02 0.00.938.381 I epoch 0 lr=1e-30
+GRAD-PROBE iter=142 params=47 nonfinite=0 unread=0 max|grad|=31.4183 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000142/0000462 loss=3.24686±0.02092 acc=29.97±0.34% t=00:00:00 ETA=00:00:02 0.00.944.872 I epoch 0 lr=1e-30
+GRAD-PROBE iter=143 params=47 nonfinite=0 unread=0 max|grad|=31.6149 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000143/0000462 loss=3.24616±0.02079 acc=29.94±0.34% t=00:00:00 ETA=00:00:02 0.00.951.305 I epoch 0 lr=1e-30
+GRAD-PROBE iter=144 params=47 nonfinite=0 unread=0 max|grad|=31.9724 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▍     ] data=0000144/0000462 loss=3.24932±0.02088 acc=29.94±0.34% t=00:00:00 ETA=00:00:02 0.00.957.900 I epoch 0 lr=1e-30
+GRAD-PROBE iter=145 params=47 nonfinite=0 unread=0 max|grad|=32.3318 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000145/0000462 loss=3.25239±0.02096 acc=29.92±0.34% t=00:00:00 ETA=00:00:02 0.00.964.510 I epoch 0 lr=1e-30
+GRAD-PROBE iter=146 params=47 nonfinite=0 unread=0 max|grad|=32.5078 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000146/0000462 loss=3.24989±0.02097 acc=29.93±0.33% t=00:00:00 ETA=00:00:02 0.00.971.043 I epoch 0 lr=1e-30
+GRAD-PROBE iter=147 params=47 nonfinite=0 unread=0 max|grad|=32.7177 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000147/0000462 loss=3.24829±0.02089 acc=29.93±0.33% t=00:00:00 ETA=00:00:02 0.00.977.498 I epoch 0 lr=1e-30
+GRAD-PROBE iter=148 params=47 nonfinite=0 unread=0 max|grad|=33.0308 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000148/0000462 loss=3.24885±0.02075 acc=29.96±0.33% t=00:00:00 ETA=00:00:02 0.00.984.040 I epoch 0 lr=1e-30
+GRAD-PROBE iter=149 params=47 nonfinite=0 unread=0 max|grad|=33.3246 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000149/0000462 loss=3.24977±0.02063 acc=29.95±0.33% t=00:00:00 ETA=00:00:02 0.00.990.522 I epoch 0 lr=1e-30
+GRAD-PROBE iter=150 params=47 nonfinite=0 unread=0 max|grad|=33.7237 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000150/0000462 loss=3.24996±0.02050 acc=29.95±0.33% t=00:00:00 ETA=00:00:02 0.00.997.051 I epoch 0 lr=1e-30
+GRAD-PROBE iter=151 params=47 nonfinite=0 unread=0 max|grad|=34.1418 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▌     ] data=0000151/0000462 loss=3.25077±0.02038 acc=29.95±0.33% t=00:00:00 ETA=00:00:02 0.01.003.601 I epoch 0 lr=1e-30
+GRAD-PROBE iter=152 params=47 nonfinite=0 unread=0 max|grad|=34.4195 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000152/0000462 loss=3.24730±0.02054 acc=29.95±0.33% t=00:00:00 ETA=00:00:02 0.01.010.204 I epoch 0 lr=1e-30
+GRAD-PROBE iter=153 params=47 nonfinite=0 unread=0 max|grad|=34.7091 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000153/0000462 loss=3.24438±0.02061 acc=29.94±0.33% t=00:00:01 ETA=00:00:02 0.01.016.777 I epoch 0 lr=1e-30
+GRAD-PROBE iter=154 params=47 nonfinite=0 unread=0 max|grad|=34.9619 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000154/0000462 loss=3.24310±0.02052 acc=29.94±0.33% t=00:00:01 ETA=00:00:02 0.01.023.433 I epoch 0 lr=1e-30
+GRAD-PROBE iter=155 params=47 nonfinite=0 unread=0 max|grad|=35.2751 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000155/0000462 loss=3.24262±0.02039 acc=29.93±0.33% t=00:00:01 ETA=00:00:02 0.01.030.055 I epoch 0 lr=1e-30
+GRAD-PROBE iter=156 params=47 nonfinite=0 unread=0 max|grad|=35.371 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000156/0000462 loss=3.24491±0.02039 acc=29.95±0.32% t=00:00:01 ETA=00:00:02 0.01.036.702 I epoch 0 lr=1e-30
+GRAD-PROBE iter=157 params=47 nonfinite=0 unread=0 max|grad|=35.4749 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000157/0000462 loss=3.24787±0.02047 acc=29.95±0.32% t=00:00:01 ETA=00:00:01 0.01.043.269 I epoch 0 lr=1e-30
+GRAD-PROBE iter=158 params=47 nonfinite=0 unread=0 max|grad|=35.5636 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▋     ] data=0000158/0000462 loss=3.24530±0.02050 acc=29.99±0.32% t=00:00:01 ETA=00:00:01 0.01.049.943 I epoch 0 lr=1e-30
+GRAD-PROBE iter=159 params=47 nonfinite=0 unread=0 max|grad|=35.6597 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000159/0000462 loss=3.24345±0.02046 acc=30.02±0.32% t=00:00:01 ETA=00:00:01 0.01.056.415 I epoch 0 lr=1e-30
+GRAD-PROBE iter=160 params=47 nonfinite=0 unread=0 max|grad|=35.9726 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000160/0000462 loss=3.24050±0.02054 acc=30.10±0.32% t=00:00:01 ETA=00:00:01 0.01.062.998 I epoch 0 lr=1e-30
+GRAD-PROBE iter=161 params=47 nonfinite=0 unread=0 max|grad|=36.3006 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000161/0000462 loss=3.23789±0.02058 acc=30.18±0.32% t=00:00:01 ETA=00:00:01 0.01.069.482 I epoch 0 lr=1e-30
+GRAD-PROBE iter=162 params=47 nonfinite=0 unread=0 max|grad|=36.4174 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000162/0000462 loss=3.23737±0.02046 acc=30.20±0.32% t=00:00:01 ETA=00:00:01 0.01.076.010 I epoch 0 lr=1e-30
+GRAD-PROBE iter=163 params=47 nonfinite=0 unread=0 max|grad|=36.592 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000163/0000462 loss=3.23748±0.02033 acc=30.22±0.32% t=00:00:01 ETA=00:00:01 0.01.082.480 I epoch 0 lr=1e-30
+GRAD-PROBE iter=164 params=47 nonfinite=0 unread=0 max|grad|=36.5976 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000164/0000462 loss=3.23571±0.02029 acc=30.24±0.32% t=00:00:01 ETA=00:00:01 0.01.088.998 I epoch 0 lr=1e-30
+GRAD-PROBE iter=165 params=47 nonfinite=0 unread=0 max|grad|=36.6165 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000165/0000462 loss=3.23430±0.02021 acc=30.22±0.32% t=00:00:01 ETA=00:00:01 0.01.095.446 I epoch 0 lr=1e-30
+GRAD-PROBE iter=166 params=47 nonfinite=0 unread=0 max|grad|=36.6951 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▊     ] data=0000166/0000462 loss=3.23207±0.02021 acc=30.24±0.32% t=00:00:01 ETA=00:00:01 0.01.102.015 I epoch 0 lr=1e-30
+GRAD-PROBE iter=167 params=47 nonfinite=0 unread=0 max|grad|=36.7826 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000167/0000462 loss=3.23061±0.02015 acc=30.25±0.31% t=00:00:01 ETA=00:00:01 0.01.108.471 I epoch 0 lr=1e-30
+GRAD-PROBE iter=168 params=47 nonfinite=0 unread=0 max|grad|=36.8927 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000168/0000462 loss=3.22990±0.02004 acc=30.26±0.31% t=00:00:01 ETA=00:00:01 0.01.114.990 I epoch 0 lr=1e-30
+GRAD-PROBE iter=169 params=47 nonfinite=0 unread=0 max|grad|=37.0093 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000169/0000462 loss=3.22996±0.01992 acc=30.27±0.31% t=00:00:01 ETA=00:00:01 0.01.121.500 I epoch 0 lr=1e-30
+GRAD-PROBE iter=170 params=47 nonfinite=0 unread=0 max|grad|=37.4562 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000170/0000462 loss=3.22817±0.01988 acc=30.29±0.31% t=00:00:01 ETA=00:00:01 0.01.128.034 I epoch 0 lr=1e-30
+GRAD-PROBE iter=171 params=47 nonfinite=0 unread=0 max|grad|=37.8835 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000171/0000462 loss=3.22672±0.01982 acc=30.32±0.31% t=00:00:01 ETA=00:00:01 0.01.134.457 I epoch 0 lr=1e-30
+GRAD-PROBE iter=172 params=47 nonfinite=0 unread=0 max|grad|=38.0432 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000172/0000462 loss=3.22507±0.01977 acc=30.33±0.31% t=00:00:01 ETA=00:00:01 0.01.140.953 I epoch 0 lr=1e-30
+GRAD-PROBE iter=173 params=47 nonfinite=0 unread=0 max|grad|=38.2442 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██▉     ] data=0000173/0000462 loss=3.22354±0.01972 acc=30.35±0.31% t=00:00:01 ETA=00:00:01 0.01.147.549 I epoch 0 lr=1e-30
+GRAD-PROBE iter=174 params=47 nonfinite=0 unread=0 max|grad|=38.4675 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000174/0000462 loss=3.22366±0.01960 acc=30.35±0.31% t=00:00:01 ETA=00:00:01 0.01.154.129 I epoch 0 lr=1e-30
+GRAD-PROBE iter=175 params=47 nonfinite=0 unread=0 max|grad|=38.7 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000175/0000462 loss=3.22436±0.01950 acc=30.35±0.31% t=00:00:01 ETA=00:00:01 0.01.160.561 I epoch 0 lr=1e-30
+GRAD-PROBE iter=176 params=47 nonfinite=0 unread=0 max|grad|=38.81 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000176/0000462 loss=3.22374±0.01940 acc=30.37±0.31% t=00:00:01 ETA=00:00:01 0.01.167.190 I epoch 0 lr=1e-30
+GRAD-PROBE iter=177 params=47 nonfinite=0 unread=0 max|grad|=38.9372 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000177/0000462 loss=3.22332±0.01930 acc=30.37±0.31% t=00:00:01 ETA=00:00:01 0.01.173.639 I epoch 0 lr=1e-30
+GRAD-PROBE iter=178 params=47 nonfinite=0 unread=0 max|grad|=39.1419 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000178/0000462 loss=3.22635±0.01943 acc=30.39±0.30% t=00:00:01 ETA=00:00:01 0.01.180.149 I epoch 0 lr=1e-30
+GRAD-PROBE iter=179 params=47 nonfinite=0 unread=0 max|grad|=39.3588 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000179/0000462 loss=3.22997±0.01965 acc=30.39±0.30% t=00:00:01 ETA=00:00:01 0.01.186.662 I epoch 0 lr=1e-30
+GRAD-PROBE iter=180 params=47 nonfinite=0 unread=0 max|grad|=39.7035 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███     ] data=0000180/0000462 loss=3.23088±0.01957 acc=30.40±0.30% t=00:00:01 ETA=00:00:01 0.01.193.166 I epoch 0 lr=1e-30
+GRAD-PROBE iter=181 params=47 nonfinite=0 unread=0 max|grad|=40.049 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000181/0000462 loss=3.23261±0.01953 acc=30.41±0.30% t=00:00:01 ETA=00:00:01 0.01.199.599 I epoch 0 lr=1e-30
+GRAD-PROBE iter=182 params=47 nonfinite=0 unread=0 max|grad|=40.2463 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000182/0000462 loss=3.23231±0.01943 acc=30.43±0.30% t=00:00:01 ETA=00:00:01 0.01.206.084 I epoch 0 lr=1e-30
+GRAD-PROBE iter=183 params=47 nonfinite=0 unread=0 max|grad|=40.4581 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000183/0000462 loss=3.23263±0.01932 acc=30.44±0.30% t=00:00:01 ETA=00:00:01 0.01.212.536 I epoch 0 lr=1e-30
+GRAD-PROBE iter=184 params=47 nonfinite=0 unread=0 max|grad|=40.73 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000184/0000462 loss=3.22980±0.01943 acc=30.47±0.30% t=00:00:01 ETA=00:00:01 0.01.219.024 I epoch 0 lr=1e-30
+GRAD-PROBE iter=185 params=47 nonfinite=0 unread=0 max|grad|=41.0022 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000185/0000462 loss=3.22670±0.01957 acc=30.51±0.30% t=00:00:01 ETA=00:00:01 0.01.225.466 I epoch 0 lr=1e-30
+GRAD-PROBE iter=186 params=47 nonfinite=0 unread=0 max|grad|=41.2764 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000186/0000462 loss=3.22515±0.01952 acc=30.50±0.30% t=00:00:01 ETA=00:00:01 0.01.231.958 I epoch 0 lr=1e-30
+GRAD-PROBE iter=187 params=47 nonfinite=0 unread=0 max|grad|=41.5674 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▏    ] data=0000187/0000462 loss=3.22416±0.01945 acc=30.48±0.30% t=00:00:01 ETA=00:00:01 0.01.238.387 I epoch 0 lr=1e-30
+GRAD-PROBE iter=188 params=47 nonfinite=0 unread=0 max|grad|=41.7762 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000188/0000462 loss=3.22593±0.01942 acc=30.46±0.30% t=00:00:01 ETA=00:00:01 0.01.244.871 I epoch 0 lr=1e-30
+GRAD-PROBE iter=189 params=47 nonfinite=0 unread=0 max|grad|=42.0284 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000189/0000462 loss=3.22790±0.01942 acc=30.44±0.30% t=00:00:01 ETA=00:00:01 0.01.251.355 I epoch 0 lr=1e-30
+GRAD-PROBE iter=190 params=47 nonfinite=0 unread=0 max|grad|=42.2701 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000190/0000462 loss=3.22495±0.01954 acc=30.48±0.30% t=00:00:01 ETA=00:00:01 0.01.257.895 I epoch 0 lr=1e-30
+GRAD-PROBE iter=191 params=47 nonfinite=0 unread=0 max|grad|=42.5239 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000191/0000462 loss=3.22245±0.01960 acc=30.49±0.29% t=00:00:01 ETA=00:00:01 0.01.264.392 I epoch 0 lr=1e-30
+GRAD-PROBE iter=192 params=47 nonfinite=0 unread=0 max|grad|=42.7045 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000192/0000462 loss=3.22509±0.01968 acc=30.50±0.29% t=00:00:01 ETA=00:00:01 0.01.270.884 I epoch 0 lr=1e-30
+GRAD-PROBE iter=193 params=47 nonfinite=0 unread=0 max|grad|=42.9039 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000193/0000462 loss=3.22884±0.01993 acc=30.48±0.29% t=00:00:01 ETA=00:00:01 0.01.277.408 I epoch 0 lr=1e-30
+GRAD-PROBE iter=194 params=47 nonfinite=0 unread=0 max|grad|=42.9696 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▎    ] data=0000194/0000462 loss=3.22969±0.01985 acc=30.48±0.29% t=00:00:01 ETA=00:00:01 0.01.283.934 I epoch 0 lr=1e-30
+GRAD-PROBE iter=195 params=47 nonfinite=0 unread=0 max|grad|=43.0587 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000195/0000462 loss=3.23136±0.01981 acc=30.47±0.29% t=00:00:01 ETA=00:00:01 0.01.290.389 I epoch 0 lr=1e-30
+GRAD-PROBE iter=196 params=47 nonfinite=0 unread=0 max|grad|=43.547 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000196/0000462 loss=3.23130±0.01971 acc=30.51±0.29% t=00:00:01 ETA=00:00:01 0.01.296.953 I epoch 0 lr=1e-30
+GRAD-PROBE iter=197 params=47 nonfinite=0 unread=0 max|grad|=44.0165 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000197/0000462 loss=3.23168±0.01962 acc=30.53±0.29% t=00:00:01 ETA=00:00:01 0.01.303.435 I epoch 0 lr=1e-30
+GRAD-PROBE iter=198 params=47 nonfinite=0 unread=0 max|grad|=44.361 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000198/0000462 loss=3.23296±0.01956 acc=30.52±0.29% t=00:00:01 ETA=00:00:01 0.01.309.970 I epoch 0 lr=1e-30
+GRAD-PROBE iter=199 params=47 nonfinite=0 unread=0 max|grad|=44.7247 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000199/0000462 loss=3.23431±0.01951 acc=30.50±0.29% t=00:00:01 ETA=00:00:01 0.01.316.405 I epoch 0 lr=1e-30
+GRAD-PROBE iter=200 params=47 nonfinite=0 unread=0 max|grad|=44.8934 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000200/0000462 loss=3.23414±0.01941 acc=30.51±0.29% t=00:00:01 ETA=00:00:01 0.01.322.994 I epoch 0 lr=1e-30
+GRAD-PROBE iter=201 params=47 nonfinite=0 unread=0 max|grad|=45.1432 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000201/0000462 loss=3.23456±0.01932 acc=30.50±0.29% t=00:00:01 ETA=00:00:01 0.01.329.454 I epoch 0 lr=1e-30
+GRAD-PROBE iter=202 params=47 nonfinite=0 unread=0 max|grad|=45.3608 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▍    ] data=0000202/0000462 loss=3.23522±0.01923 acc=30.49±0.29% t=00:00:01 ETA=00:00:01 0.01.335.978 I epoch 0 lr=1e-30
+GRAD-PROBE iter=203 params=47 nonfinite=0 unread=0 max|grad|=45.5485 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000203/0000462 loss=3.23636±0.01917 acc=30.47±0.29% t=00:00:01 ETA=00:00:01 0.01.342.442 I epoch 0 lr=1e-30
+GRAD-PROBE iter=204 params=47 nonfinite=0 unread=0 max|grad|=45.94 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000204/0000462 loss=3.23695±0.01909 acc=30.48±0.28% t=00:00:01 ETA=00:00:01 0.01.349.027 I epoch 0 lr=1e-30
+GRAD-PROBE iter=205 params=47 nonfinite=0 unread=0 max|grad|=46.3176 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000205/0000462 loss=3.23735±0.01900 acc=30.46±0.28% t=00:00:01 ETA=00:00:01 0.01.355.541 I epoch 0 lr=1e-30
+GRAD-PROBE iter=206 params=47 nonfinite=0 unread=0 max|grad|=46.459 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000206/0000462 loss=3.23679±0.01891 acc=30.49±0.28% t=00:00:01 ETA=00:00:01 0.01.362.044 I epoch 0 lr=1e-30
+GRAD-PROBE iter=207 params=47 nonfinite=0 unread=0 max|grad|=46.6174 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000207/0000462 loss=3.23678±0.01882 acc=30.51±0.28% t=00:00:01 ETA=00:00:01 0.01.368.544 I epoch 0 lr=1e-30
+GRAD-PROBE iter=208 params=47 nonfinite=0 unread=0 max|grad|=47.0077 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000208/0000462 loss=3.23807±0.01878 acc=30.51±0.28% t=00:00:01 ETA=00:00:01 0.01.375.025 I epoch 0 lr=1e-30
+GRAD-PROBE iter=209 params=47 nonfinite=0 unread=0 max|grad|=47.3869 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▌    ] data=0000209/0000462 loss=3.23974±0.01876 acc=30.50±0.28% t=00:00:01 ETA=00:00:01 0.01.381.452 I epoch 0 lr=1e-30
+GRAD-PROBE iter=210 params=47 nonfinite=0 unread=0 max|grad|=47.4828 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000210/0000462 loss=3.24017±0.01868 acc=30.51±0.28% t=00:00:01 ETA=00:00:01 0.01.388.057 I epoch 0 lr=1e-30
+GRAD-PROBE iter=211 params=47 nonfinite=0 unread=0 max|grad|=47.6108 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000211/0000462 loss=3.24047±0.01859 acc=30.51±0.28% t=00:00:01 ETA=00:00:01 0.01.394.567 I epoch 0 lr=1e-30
+GRAD-PROBE iter=212 params=47 nonfinite=0 unread=0 max|grad|=47.7343 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000212/0000462 loss=3.23963±0.01852 acc=30.54±0.28% t=00:00:01 ETA=00:00:01 0.01.401.225 I epoch 0 lr=1e-30
+GRAD-PROBE iter=213 params=47 nonfinite=0 unread=0 max|grad|=47.8889 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000213/0000462 loss=3.23891±0.01845 acc=30.56±0.28% t=00:00:01 ETA=00:00:01 0.01.407.671 I epoch 0 lr=1e-30
+GRAD-PROBE iter=214 params=47 nonfinite=0 unread=0 max|grad|=48.006 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000214/0000462 loss=3.23765±0.01840 acc=30.56±0.28% t=00:00:01 ETA=00:00:01 0.01.414.231 I epoch 0 lr=1e-30
+GRAD-PROBE iter=215 params=47 nonfinite=0 unread=0 max|grad|=48.1525 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000215/0000462 loss=3.23689±0.01833 acc=30.54±0.28% t=00:00:01 ETA=00:00:01 0.01.420.678 I epoch 0 lr=1e-30
+GRAD-PROBE iter=216 params=47 nonfinite=0 unread=0 max|grad|=48.3651 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▋    ] data=0000216/0000462 loss=3.23662±0.01825 acc=30.54±0.28% t=00:00:01 ETA=00:00:01 0.01.427.190 I epoch 0 lr=1e-30
+GRAD-PROBE iter=217 params=47 nonfinite=0 unread=0 max|grad|=48.5846 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000217/0000462 loss=3.23657±0.01817 acc=30.54±0.28% t=00:00:01 ETA=00:00:01 0.01.433.638 I epoch 0 lr=1e-30
+GRAD-PROBE iter=218 params=47 nonfinite=0 unread=0 max|grad|=48.7749 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000218/0000462 loss=3.23630±0.01809 acc=30.54±0.28% t=00:00:01 ETA=00:00:01 0.01.440.158 I epoch 0 lr=1e-30
+GRAD-PROBE iter=219 params=47 nonfinite=0 unread=0 max|grad|=48.9769 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000219/0000462 loss=3.23646±0.01800 acc=30.53±0.28% t=00:00:01 ETA=00:00:01 0.01.446.597 I epoch 0 lr=1e-30
+GRAD-PROBE iter=220 params=47 nonfinite=0 unread=0 max|grad|=49.2489 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000220/0000462 loss=3.23482±0.01800 acc=30.57±0.27% t=00:00:01 ETA=00:00:01 0.01.453.195 I epoch 0 lr=1e-30
+GRAD-PROBE iter=221 params=47 nonfinite=0 unread=0 max|grad|=49.5125 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000221/0000462 loss=3.23400±0.01793 acc=30.58±0.27% t=00:00:01 ETA=00:00:01 0.01.459.649 I epoch 0 lr=1e-30
+GRAD-PROBE iter=222 params=47 nonfinite=0 unread=0 max|grad|=49.794 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000222/0000462 loss=3.23497±0.01788 acc=30.59±0.27% t=00:00:01 ETA=00:00:01 0.01.466.343 I epoch 0 lr=1e-30
+GRAD-PROBE iter=223 params=47 nonfinite=0 unread=0 max|grad|=50.0968 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▊    ] data=0000223/0000462 loss=3.23596±0.01783 acc=30.61±0.27% t=00:00:01 ETA=00:00:01 0.01.472.868 I epoch 0 lr=1e-30
+GRAD-PROBE iter=224 params=47 nonfinite=0 unread=0 max|grad|=50.3798 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000224/0000462 loss=3.23351±0.01791 acc=30.61±0.27% t=00:00:01 ETA=00:00:01 0.01.479.415 I epoch 0 lr=1e-30
+GRAD-PROBE iter=225 params=47 nonfinite=0 unread=0 max|grad|=50.6909 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000225/0000462 loss=3.23164±0.01793 acc=30.62±0.27% t=00:00:01 ETA=00:00:01 0.01.485.848 I epoch 0 lr=1e-30
+GRAD-PROBE iter=226 params=47 nonfinite=0 unread=0 max|grad|=50.9122 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000226/0000462 loss=3.23241±0.01787 acc=30.62±0.27% t=00:00:01 ETA=00:00:01 0.01.492.331 I epoch 0 lr=1e-30
+GRAD-PROBE iter=227 params=47 nonfinite=0 unread=0 max|grad|=51.1371 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000227/0000462 loss=3.23355±0.01783 acc=30.61±0.27% t=00:00:01 ETA=00:00:01 0.01.498.836 I epoch 0 lr=1e-30
+GRAD-PROBE iter=228 params=47 nonfinite=0 unread=0 max|grad|=51.1766 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000228/0000462 loss=3.23313±0.01775 acc=30.62±0.27% t=00:00:01 ETA=00:00:01 0.01.505.459 I epoch 0 lr=1e-30
+GRAD-PROBE iter=229 params=47 nonfinite=0 unread=0 max|grad|=51.2286 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000229/0000462 loss=3.23294±0.01768 acc=30.62±0.27% t=00:00:01 ETA=00:00:01 0.01.511.943 I epoch 0 lr=1e-30
+GRAD-PROBE iter=230 params=47 nonfinite=0 unread=0 max|grad|=51.5871 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000230/0000462 loss=3.23307±0.01760 acc=30.61±0.27% t=00:00:01 ETA=00:00:01 0.01.518.447 I epoch 0 lr=1e-30
+GRAD-PROBE iter=231 params=47 nonfinite=0 unread=0 max|grad|=51.9464 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███▉    ] data=0000231/0000462 loss=3.23332±0.01753 acc=30.60±0.27% t=00:00:01 ETA=00:00:01 0.01.524.924 I epoch 0 lr=1e-30
+GRAD-PROBE iter=232 params=47 nonfinite=0 unread=0 max|grad|=52.1594 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000232/0000462 loss=3.23286±0.01746 acc=30.60±0.27% t=00:00:01 ETA=00:00:01 0.01.531.417 I epoch 0 lr=1e-30
+GRAD-PROBE iter=233 params=47 nonfinite=0 unread=0 max|grad|=52.4013 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000233/0000462 loss=3.23252±0.01739 acc=30.60±0.27% t=00:00:01 ETA=00:00:01 0.01.537.868 I epoch 0 lr=1e-30
+GRAD-PROBE iter=234 params=47 nonfinite=0 unread=0 max|grad|=52.8127 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000234/0000462 loss=3.23116±0.01736 acc=30.60±0.27% t=00:00:01 ETA=00:00:01 0.01.544.381 I epoch 0 lr=1e-30
+GRAD-PROBE iter=235 params=47 nonfinite=0 unread=0 max|grad|=53.2222 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000235/0000462 loss=3.23039±0.01731 acc=30.59±0.27% t=00:00:01 ETA=00:00:01 0.01.550.876 I epoch 0 lr=1e-30
+GRAD-PROBE iter=236 params=47 nonfinite=0 unread=0 max|grad|=53.2558 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000236/0000462 loss=3.23021±0.01723 acc=30.60±0.27% t=00:00:01 ETA=00:00:01 0.01.557.390 I epoch 0 lr=1e-30
+GRAD-PROBE iter=237 params=47 nonfinite=0 unread=0 max|grad|=53.3564 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000237/0000462 loss=3.23047±0.01716 acc=30.60±0.26% t=00:00:01 ETA=00:00:01 0.01.564.057 I epoch 0 lr=1e-30
+GRAD-PROBE iter=238 params=47 nonfinite=0 unread=0 max|grad|=53.7424 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████    ] data=0000238/0000462 loss=3.22776±0.01731 acc=30.65±0.26% t=00:00:01 ETA=00:00:01 0.01.570.666 I epoch 0 lr=1e-30
+GRAD-PROBE iter=239 params=47 nonfinite=0 unread=0 max|grad|=54.0721 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000239/0000462 loss=3.22515±0.01743 acc=30.68±0.26% t=00:00:01 ETA=00:00:01 0.01.577.166 I epoch 0 lr=1e-30
+GRAD-PROBE iter=240 params=47 nonfinite=0 unread=0 max|grad|=54.2507 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000240/0000462 loss=3.22502±0.01736 acc=30.69±0.26% t=00:00:01 ETA=00:00:01 0.01.583.658 I epoch 0 lr=1e-30
+GRAD-PROBE iter=241 params=47 nonfinite=0 unread=0 max|grad|=54.4433 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000241/0000462 loss=3.22542±0.01729 acc=30.69±0.26% t=00:00:01 ETA=00:00:01 0.01.590.198 I epoch 0 lr=1e-30
+GRAD-PROBE iter=242 params=47 nonfinite=0 unread=0 max|grad|=54.4599 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000242/0000462 loss=3.22586±0.01722 acc=30.68±0.26% t=00:00:01 ETA=00:00:01 0.01.596.866 I epoch 0 lr=1e-30
+GRAD-PROBE iter=243 params=47 nonfinite=0 unread=0 max|grad|=54.4993 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000243/0000462 loss=3.22627±0.01716 acc=30.66±0.26% t=00:00:01 ETA=00:00:01 0.01.603.374 I epoch 0 lr=1e-30
+GRAD-PROBE iter=244 params=47 nonfinite=0 unread=0 max|grad|=54.8377 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000244/0000462 loss=3.22438±0.01719 acc=30.68±0.26% t=00:00:01 ETA=00:00:01 0.01.609.906 I epoch 0 lr=1e-30
+GRAD-PROBE iter=245 params=47 nonfinite=0 unread=0 max|grad|=55.1668 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▏   ] data=0000245/0000462 loss=3.22305±0.01717 acc=30.69±0.26% t=00:00:01 ETA=00:00:01 0.01.616.376 I epoch 0 lr=1e-30
+GRAD-PROBE iter=246 params=47 nonfinite=0 unread=0 max|grad|=55.2497 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000246/0000462 loss=3.21972±0.01742 acc=30.73±0.26% t=00:00:01 ETA=00:00:01 0.01.622.895 I epoch 0 lr=1e-30
+GRAD-PROBE iter=247 params=47 nonfinite=0 unread=0 max|grad|=55.3865 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000247/0000462 loss=3.21684±0.01759 acc=30.76±0.26% t=00:00:01 ETA=00:00:01 0.01.629.351 I epoch 0 lr=1e-30
+GRAD-PROBE iter=248 params=47 nonfinite=0 unread=0 max|grad|=55.6932 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000248/0000462 loss=3.21775±0.01754 acc=30.76±0.26% t=00:00:01 ETA=00:00:01 0.01.635.871 I epoch 0 lr=1e-30
+GRAD-PROBE iter=249 params=47 nonfinite=0 unread=0 max|grad|=55.9981 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000249/0000462 loss=3.21879±0.01750 acc=30.75±0.26% t=00:00:01 ETA=00:00:01 0.01.642.383 I epoch 0 lr=1e-30
+GRAD-PROBE iter=250 params=47 nonfinite=0 unread=0 max|grad|=56.226 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000250/0000462 loss=3.21778±0.01746 acc=30.78±0.26% t=00:00:01 ETA=00:00:01 0.01.648.969 I epoch 0 lr=1e-30
+GRAD-PROBE iter=251 params=47 nonfinite=0 unread=0 max|grad|=56.4885 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000251/0000462 loss=3.21683±0.01742 acc=30.79±0.26% t=00:00:01 ETA=00:00:01 0.01.655.542 I epoch 0 lr=1e-30
+GRAD-PROBE iter=252 params=47 nonfinite=0 unread=0 max|grad|=56.849 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▎   ] data=0000252/0000462 loss=3.21562±0.01739 acc=30.81±0.26% t=00:00:01 ETA=00:00:01 0.01.662.110 I epoch 0 lr=1e-30
+GRAD-PROBE iter=253 params=47 nonfinite=0 unread=0 max|grad|=57.2203 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000253/0000462 loss=3.21461±0.01735 acc=30.81±0.26% t=00:00:01 ETA=00:00:01 0.01.668.597 I epoch 0 lr=1e-30
+GRAD-PROBE iter=254 params=47 nonfinite=0 unread=0 max|grad|=57.517 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000254/0000462 loss=3.21675±0.01742 acc=30.79±0.26% t=00:00:01 ETA=00:00:01 0.01.675.272 I epoch 0 lr=1e-30
+GRAD-PROBE iter=255 params=47 nonfinite=0 unread=0 max|grad|=57.8332 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000255/0000462 loss=3.21910±0.01750 acc=30.77±0.26% t=00:00:01 ETA=00:00:01 0.01.681.861 I epoch 0 lr=1e-30
+GRAD-PROBE iter=256 params=47 nonfinite=0 unread=0 max|grad|=57.9503 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000256/0000462 loss=3.21926±0.01744 acc=30.76±0.25% t=00:00:01 ETA=00:00:01 0.01.688.450 I epoch 0 lr=1e-30
+GRAD-PROBE iter=257 params=47 nonfinite=0 unread=0 max|grad|=58.0814 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000257/0000462 loss=3.22005±0.01739 acc=30.75±0.25% t=00:00:01 ETA=00:00:01 0.01.694.956 I epoch 0 lr=1e-30
+GRAD-PROBE iter=258 params=47 nonfinite=0 unread=0 max|grad|=58.297 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000258/0000462 loss=3.21882±0.01736 acc=30.77±0.25% t=00:00:01 ETA=00:00:01 0.01.701.482 I epoch 0 lr=1e-30
+GRAD-PROBE iter=259 params=47 nonfinite=0 unread=0 max|grad|=58.5326 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▍   ] data=0000259/0000462 loss=3.21774±0.01733 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.707.935 I epoch 0 lr=1e-30
+GRAD-PROBE iter=260 params=47 nonfinite=0 unread=0 max|grad|=58.748 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000260/0000462 loss=3.21735±0.01727 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.714.468 I epoch 0 lr=1e-30
+GRAD-PROBE iter=261 params=47 nonfinite=0 unread=0 max|grad|=58.9507 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000261/0000462 loss=3.21665±0.01722 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.720.984 I epoch 0 lr=1e-30
+GRAD-PROBE iter=262 params=47 nonfinite=0 unread=0 max|grad|=59.3252 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000262/0000462 loss=3.21634±0.01715 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.727.498 I epoch 0 lr=1e-30
+GRAD-PROBE iter=263 params=47 nonfinite=0 unread=0 max|grad|=59.709 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000263/0000462 loss=3.21613±0.01709 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.734.037 I epoch 0 lr=1e-30
+GRAD-PROBE iter=264 params=47 nonfinite=0 unread=0 max|grad|=59.902 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000264/0000462 loss=3.21476±0.01708 acc=30.81±0.25% t=00:00:01 ETA=00:00:01 0.01.740.571 I epoch 0 lr=1e-30
+GRAD-PROBE iter=265 params=47 nonfinite=0 unread=0 max|grad|=60.1174 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000265/0000462 loss=3.21352±0.01706 acc=30.82±0.25% t=00:00:01 ETA=00:00:01 0.01.747.130 I epoch 0 lr=1e-30
+GRAD-PROBE iter=266 params=47 nonfinite=0 unread=0 max|grad|=60.303 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000266/0000462 loss=3.21397±0.01700 acc=30.81±0.25% t=00:00:01 ETA=00:00:01 0.01.753.997 I epoch 0 lr=1e-30
+GRAD-PROBE iter=267 params=47 nonfinite=0 unread=0 max|grad|=60.5282 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▌   ] data=0000267/0000462 loss=3.21457±0.01695 acc=30.79±0.25% t=00:00:01 ETA=00:00:01 0.01.760.588 I epoch 0 lr=1e-30
+GRAD-PROBE iter=268 params=47 nonfinite=0 unread=0 max|grad|=60.7041 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000268/0000462 loss=3.21280±0.01698 acc=30.81±0.25% t=00:00:01 ETA=00:00:01 0.01.767.147 I epoch 0 lr=1e-30
+GRAD-PROBE iter=269 params=47 nonfinite=0 unread=0 max|grad|=60.8827 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000269/0000462 loss=3.21133±0.01698 acc=30.82±0.25% t=00:00:01 ETA=00:00:01 0.01.773.685 I epoch 0 lr=1e-30
+GRAD-PROBE iter=270 params=47 nonfinite=0 unread=0 max|grad|=61.2245 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000270/0000462 loss=3.21042±0.01694 acc=30.81±0.25% t=00:00:01 ETA=00:00:01 0.01.780.327 I epoch 0 lr=1e-30
+GRAD-PROBE iter=271 params=47 nonfinite=0 unread=0 max|grad|=61.5874 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000271/0000462 loss=3.21019±0.01688 acc=30.79±0.25% t=00:00:01 ETA=00:00:01 0.01.786.911 I epoch 0 lr=1e-30
+GRAD-PROBE iter=272 params=47 nonfinite=0 unread=0 max|grad|=61.7491 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000272/0000462 loss=3.21083±0.01683 acc=30.78±0.25% t=00:00:01 ETA=00:00:01 0.01.793.609 I epoch 0 lr=1e-30
+GRAD-PROBE iter=273 params=47 nonfinite=0 unread=0 max|grad|=61.9234 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000273/0000462 loss=3.21170±0.01679 acc=30.75±0.25% t=00:00:01 ETA=00:00:01 0.01.800.096 I epoch 0 lr=1e-30
+GRAD-PROBE iter=274 params=47 nonfinite=0 unread=0 max|grad|=62.2608 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▋   ] data=0000274/0000462 loss=3.21189±0.01673 acc=30.74±0.25% t=00:00:01 ETA=00:00:01 0.01.806.810 I epoch 0 lr=1e-30
+GRAD-PROBE iter=275 params=47 nonfinite=0 unread=0 max|grad|=62.589 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000275/0000462 loss=3.21215±0.01667 acc=30.72±0.25% t=00:00:01 ETA=00:00:01 0.01.813.331 I epoch 0 lr=1e-30
+GRAD-PROBE iter=276 params=47 nonfinite=0 unread=0 max|grad|=62.5552 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000276/0000462 loss=3.21342±0.01666 acc=30.71±0.25% t=00:00:01 ETA=00:00:01 0.01.819.979 I epoch 0 lr=1e-30
+GRAD-PROBE iter=277 params=47 nonfinite=0 unread=0 max|grad|=62.5514 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000277/0000462 loss=3.21480±0.01665 acc=30.69±0.24% t=00:00:01 ETA=00:00:01 0.01.826.465 I epoch 0 lr=1e-30
+GRAD-PROBE iter=278 params=47 nonfinite=0 unread=0 max|grad|=62.7494 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000278/0000462 loss=3.21417±0.01661 acc=30.69±0.24% t=00:00:01 ETA=00:00:01 0.01.832.994 I epoch 0 lr=1e-30
+GRAD-PROBE iter=279 params=47 nonfinite=0 unread=0 max|grad|=62.9684 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000279/0000462 loss=3.21396±0.01655 acc=30.68±0.24% t=00:00:01 ETA=00:00:01 0.01.839.484 I epoch 0 lr=1e-30
+GRAD-PROBE iter=280 params=47 nonfinite=0 unread=0 max|grad|=62.9701 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000280/0000462 loss=3.21320±0.01651 acc=30.69±0.24% t=00:00:01 ETA=00:00:01 0.01.846.021 I epoch 0 lr=1e-30
+GRAD-PROBE iter=281 params=47 nonfinite=0 unread=0 max|grad|=62.9966 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▊   ] data=0000281/0000462 loss=3.21279±0.01645 acc=30.70±0.24% t=00:00:01 ETA=00:00:01 0.01.852.498 I epoch 0 lr=1e-30
+GRAD-PROBE iter=282 params=47 nonfinite=0 unread=0 max|grad|=63.1944 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000282/0000462 loss=3.21436±0.01647 acc=30.67±0.24% t=00:00:01 ETA=00:00:01 0.01.858.989 I epoch 0 lr=1e-30
+GRAD-PROBE iter=283 params=47 nonfinite=0 unread=0 max|grad|=63.3859 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000283/0000462 loss=3.21624±0.01652 acc=30.65±0.24% t=00:00:01 ETA=00:00:01 0.01.865.441 I epoch 0 lr=1e-30
+GRAD-PROBE iter=284 params=47 nonfinite=0 unread=0 max|grad|=63.6565 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000284/0000462 loss=3.21782±0.01654 acc=30.66±0.24% t=00:00:01 ETA=00:00:01 0.01.871.967 I epoch 0 lr=1e-30
+GRAD-PROBE iter=285 params=47 nonfinite=0 unread=0 max|grad|=63.9077 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000285/0000462 loss=3.21957±0.01657 acc=30.65±0.24% t=00:00:01 ETA=00:00:01 0.01.878.492 I epoch 0 lr=1e-30
+GRAD-PROBE iter=286 params=47 nonfinite=0 unread=0 max|grad|=64.2006 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000286/0000462 loss=3.21920±0.01652 acc=30.64±0.24% t=00:00:01 ETA=00:00:01 0.01.885.000 I epoch 0 lr=1e-30
+GRAD-PROBE iter=287 params=47 nonfinite=0 unread=0 max|grad|=64.4985 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000287/0000462 loss=3.21901±0.01646 acc=30.62±0.24% t=00:00:01 ETA=00:00:01 0.01.891.484 I epoch 0 lr=1e-30
+GRAD-PROBE iter=288 params=47 nonfinite=0 unread=0 max|grad|=64.6919 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [████▉   ] data=0000288/0000462 loss=3.21952±0.01641 acc=30.61±0.24% t=00:00:01 ETA=00:00:01 0.01.897.984 I epoch 0 lr=1e-30
+GRAD-PROBE iter=289 params=47 nonfinite=0 unread=0 max|grad|=64.8953 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000289/0000462 loss=3.22040±0.01638 acc=30.61±0.24% t=00:00:01 ETA=00:00:01 0.01.904.429 I epoch 0 lr=1e-30
+GRAD-PROBE iter=290 params=47 nonfinite=0 unread=0 max|grad|=64.9404 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000290/0000462 loss=3.21997±0.01633 acc=30.61±0.24% t=00:00:01 ETA=00:00:01 0.01.911.079 I epoch 0 lr=1e-30
+GRAD-PROBE iter=291 params=47 nonfinite=0 unread=0 max|grad|=65.0187 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000291/0000462 loss=3.21985±0.01627 acc=30.61±0.24% t=00:00:01 ETA=00:00:01 0.01.917.541 I epoch 0 lr=1e-30
+GRAD-PROBE iter=292 params=47 nonfinite=0 unread=0 max|grad|=65.357 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000292/0000462 loss=3.22044±0.01623 acc=30.59±0.24% t=00:00:01 ETA=00:00:01 0.01.924.108 I epoch 0 lr=1e-30
+GRAD-PROBE iter=293 params=47 nonfinite=0 unread=0 max|grad|=65.6981 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000293/0000462 loss=3.22129±0.01619 acc=30.58±0.24% t=00:00:01 ETA=00:00:01 0.01.930.554 I epoch 0 lr=1e-30
+GRAD-PROBE iter=294 params=47 nonfinite=0 unread=0 max|grad|=66.0284 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000294/0000462 loss=3.21875±0.01634 acc=30.57±0.24% t=00:00:01 ETA=00:00:01 0.01.937.314 I epoch 0 lr=1e-30
+GRAD-PROBE iter=295 params=47 nonfinite=0 unread=0 max|grad|=66.4234 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████   ] data=0000295/0000462 loss=3.21632±0.01646 acc=30.57±0.24% t=00:00:01 ETA=00:00:01 0.01.943.886 I epoch 0 lr=1e-30
+GRAD-PROBE iter=296 params=47 nonfinite=0 unread=0 max|grad|=66.49 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000296/0000462 loss=3.21466±0.01649 acc=30.59±0.24% t=00:00:01 ETA=00:00:01 0.01.950.431 I epoch 0 lr=1e-30
+GRAD-PROBE iter=297 params=47 nonfinite=0 unread=0 max|grad|=66.5995 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000297/0000462 loss=3.21323±0.01650 acc=30.60±0.24% t=00:00:01 ETA=00:00:01 0.01.956.890 I epoch 0 lr=1e-30
+GRAD-PROBE iter=298 params=47 nonfinite=0 unread=0 max|grad|=66.7579 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000298/0000462 loss=3.21229±0.01647 acc=30.59±0.24% t=00:00:01 ETA=00:00:01 0.01.963.394 I epoch 0 lr=1e-30
+GRAD-PROBE iter=299 params=47 nonfinite=0 unread=0 max|grad|=66.9559 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000299/0000462 loss=3.21180±0.01642 acc=30.58±0.24% t=00:00:01 ETA=00:00:01 0.01.969.931 I epoch 0 lr=1e-30
+GRAD-PROBE iter=300 params=47 nonfinite=0 unread=0 max|grad|=67.1703 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000300/0000462 loss=3.21345±0.01645 acc=30.56±0.24% t=00:00:01 ETA=00:00:01 0.01.976.439 I epoch 0 lr=1e-30
+GRAD-PROBE iter=301 params=47 nonfinite=0 unread=0 max|grad|=67.3806 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000301/0000462 loss=3.21520±0.01649 acc=30.54±0.23% t=00:00:01 ETA=00:00:01 0.01.982.905 I epoch 0 lr=1e-30
+GRAD-PROBE iter=302 params=47 nonfinite=0 unread=0 max|grad|=67.5975 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000302/0000462 loss=3.21570±0.01644 acc=30.54±0.23% t=00:00:01 ETA=00:00:01 0.01.989.426 I epoch 0 lr=1e-30
+GRAD-PROBE iter=303 params=47 nonfinite=0 unread=0 max|grad|=67.8236 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▏  ] data=0000303/0000462 loss=3.21613±0.01639 acc=30.54±0.23% t=00:00:01 ETA=00:00:01 0.01.995.943 I epoch 0 lr=1e-30
+GRAD-PROBE iter=304 params=47 nonfinite=0 unread=0 max|grad|=67.9033 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000304/0000462 loss=3.21537±0.01635 acc=30.56±0.23% t=00:00:01 ETA=00:00:01 0.02.002.470 I epoch 0 lr=1e-30
+GRAD-PROBE iter=305 params=47 nonfinite=0 unread=0 max|grad|=68.0096 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000305/0000462 loss=3.21473±0.01631 acc=30.59±0.23% t=00:00:01 ETA=00:00:01 0.02.008.911 I epoch 0 lr=1e-30
+GRAD-PROBE iter=306 params=47 nonfinite=0 unread=0 max|grad|=68.2093 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000306/0000462 loss=3.21691±0.01640 acc=30.56±0.23% t=00:00:02 ETA=00:00:01 0.02.015.484 I epoch 0 lr=1e-30
+GRAD-PROBE iter=307 params=47 nonfinite=0 unread=0 max|grad|=68.4077 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000307/0000462 loss=3.21892±0.01647 acc=30.52±0.23% t=00:00:02 ETA=00:00:01 0.02.021.925 I epoch 0 lr=1e-30
+GRAD-PROBE iter=308 params=47 nonfinite=0 unread=0 max|grad|=68.673 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000308/0000462 loss=3.21965±0.01644 acc=30.52±0.23% t=00:00:02 ETA=00:00:01 0.02.028.420 I epoch 0 lr=1e-30
+GRAD-PROBE iter=309 params=47 nonfinite=0 unread=0 max|grad|=68.9551 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000309/0000462 loss=3.22054±0.01641 acc=30.51±0.23% t=00:00:02 ETA=00:00:00 0.02.034.868 I epoch 0 lr=1e-30
+GRAD-PROBE iter=310 params=47 nonfinite=0 unread=0 max|grad|=69.1156 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▎  ] data=0000310/0000462 loss=3.22044±0.01636 acc=30.51±0.23% t=00:00:02 ETA=00:00:00 0.02.041.383 I epoch 0 lr=1e-30
+GRAD-PROBE iter=311 params=47 nonfinite=0 unread=0 max|grad|=69.286 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000311/0000462 loss=3.22035±0.01630 acc=30.51±0.23% t=00:00:02 ETA=00:00:00 0.02.047.965 I epoch 0 lr=1e-30
+GRAD-PROBE iter=312 params=47 nonfinite=0 unread=0 max|grad|=69.4333 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000312/0000462 loss=3.22009±0.01625 acc=30.52±0.23% t=00:00:02 ETA=00:00:00 0.02.054.495 I epoch 0 lr=1e-30
+GRAD-PROBE iter=313 params=47 nonfinite=0 unread=0 max|grad|=69.6057 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000313/0000462 loss=3.22023±0.01620 acc=30.53±0.23% t=00:00:02 ETA=00:00:00 0.02.060.969 I epoch 0 lr=1e-30
+GRAD-PROBE iter=314 params=47 nonfinite=0 unread=0 max|grad|=69.6733 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000314/0000462 loss=3.21897±0.01620 acc=30.53±0.23% t=00:00:02 ETA=00:00:00 0.02.067.477 I epoch 0 lr=1e-30
+GRAD-PROBE iter=315 params=47 nonfinite=0 unread=0 max|grad|=69.7455 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000315/0000462 loss=3.21812±0.01617 acc=30.54±0.23% t=00:00:02 ETA=00:00:00 0.02.073.994 I epoch 0 lr=1e-30
+GRAD-PROBE iter=316 params=47 nonfinite=0 unread=0 max|grad|=69.9997 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000316/0000462 loss=3.21761±0.01613 acc=30.56±0.23% t=00:00:02 ETA=00:00:00 0.02.080.559 I epoch 0 lr=1e-30
+GRAD-PROBE iter=317 params=47 nonfinite=0 unread=0 max|grad|=70.234 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▍  ] data=0000317/0000462 loss=3.21728±0.01608 acc=30.58±0.23% t=00:00:02 ETA=00:00:00 0.02.087.043 I epoch 0 lr=1e-30
+GRAD-PROBE iter=318 params=47 nonfinite=0 unread=0 max|grad|=70.3222 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000318/0000462 loss=3.21742±0.01603 acc=30.57±0.23% t=00:00:02 ETA=00:00:00 0.02.093.576 I epoch 0 lr=1e-30
+GRAD-PROBE iter=319 params=47 nonfinite=0 unread=0 max|grad|=70.4381 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000319/0000462 loss=3.21759±0.01598 acc=30.55±0.23% t=00:00:02 ETA=00:00:00 0.02.100.010 I epoch 0 lr=1e-30
+GRAD-PROBE iter=320 params=47 nonfinite=0 unread=0 max|grad|=70.7366 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000320/0000462 loss=3.21840±0.01595 acc=30.55±0.23% t=00:00:02 ETA=00:00:00 0.02.106.555 I epoch 0 lr=1e-30
+GRAD-PROBE iter=321 params=47 nonfinite=0 unread=0 max|grad|=71.0603 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000321/0000462 loss=3.21909±0.01592 acc=30.54±0.23% t=00:00:02 ETA=00:00:00 0.02.113.050 I epoch 0 lr=1e-30
+GRAD-PROBE iter=322 params=47 nonfinite=0 unread=0 max|grad|=71.2979 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000322/0000462 loss=3.21865±0.01587 acc=30.55±0.23% t=00:00:02 ETA=00:00:00 0.02.119.706 I epoch 0 lr=1e-30
+GRAD-PROBE iter=323 params=47 nonfinite=0 unread=0 max|grad|=71.5563 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000323/0000462 loss=3.21856±0.01582 acc=30.55±0.23% t=00:00:02 ETA=00:00:00 0.02.126.155 I epoch 0 lr=1e-30
+GRAD-PROBE iter=324 params=47 nonfinite=0 unread=0 max|grad|=71.7223 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▌  ] data=0000324/0000462 loss=3.21891±0.01578 acc=30.55±0.23% t=00:00:02 ETA=00:00:00 0.02.132.750 I epoch 0 lr=1e-30
+GRAD-PROBE iter=325 params=47 nonfinite=0 unread=0 max|grad|=71.8833 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000325/0000462 loss=3.21942±0.01574 acc=30.54±0.23% t=00:00:02 ETA=00:00:00 0.02.139.255 I epoch 0 lr=1e-30
+GRAD-PROBE iter=326 params=47 nonfinite=0 unread=0 max|grad|=72.0778 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000326/0000462 loss=3.22003±0.01570 acc=30.54±0.23% t=00:00:02 ETA=00:00:00 0.02.145.811 I epoch 0 lr=1e-30
+GRAD-PROBE iter=327 params=47 nonfinite=0 unread=0 max|grad|=72.2915 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000327/0000462 loss=3.22064±0.01567 acc=30.53±0.23% t=00:00:02 ETA=00:00:00 0.02.152.297 I epoch 0 lr=1e-30
+GRAD-PROBE iter=328 params=47 nonfinite=0 unread=0 max|grad|=72.3832 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000328/0000462 loss=3.22111±0.01562 acc=30.53±0.22% t=00:00:02 ETA=00:00:00 0.02.158.816 I epoch 0 lr=1e-30
+GRAD-PROBE iter=329 params=47 nonfinite=0 unread=0 max|grad|=72.4917 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000329/0000462 loss=3.22168±0.01559 acc=30.52±0.22% t=00:00:02 ETA=00:00:00 0.02.165.284 I epoch 0 lr=1e-30
+GRAD-PROBE iter=330 params=47 nonfinite=0 unread=0 max|grad|=72.5443 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000330/0000462 loss=3.22175±0.01554 acc=30.51±0.22% t=00:00:02 ETA=00:00:00 0.02.171.797 I epoch 0 lr=1e-30
+GRAD-PROBE iter=331 params=47 nonfinite=0 unread=0 max|grad|=72.6185 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000331/0000462 loss=3.22179±0.01549 acc=30.49±0.22% t=00:00:02 ETA=00:00:00 0.02.178.276 I epoch 0 lr=1e-30
+GRAD-PROBE iter=332 params=47 nonfinite=0 unread=0 max|grad|=72.6353 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▋  ] data=0000332/0000462 loss=3.22169±0.01545 acc=30.51±0.22% t=00:00:02 ETA=00:00:00 0.02.184.800 I epoch 0 lr=1e-30
+GRAD-PROBE iter=333 params=47 nonfinite=0 unread=0 max|grad|=72.6975 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000333/0000462 loss=3.22198±0.01540 acc=30.51±0.22% t=00:00:02 ETA=00:00:00 0.02.191.270 I epoch 0 lr=1e-30
+GRAD-PROBE iter=334 params=47 nonfinite=0 unread=0 max|grad|=73.0079 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000334/0000462 loss=3.22145±0.01537 acc=30.53±0.22% t=00:00:02 ETA=00:00:00 0.02.197.770 I epoch 0 lr=1e-30
+GRAD-PROBE iter=335 params=47 nonfinite=0 unread=0 max|grad|=73.3069 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000335/0000462 loss=3.22119±0.01532 acc=30.53±0.22% t=00:00:02 ETA=00:00:00 0.02.204.212 I epoch 0 lr=1e-30
+GRAD-PROBE iter=336 params=47 nonfinite=0 unread=0 max|grad|=73.2846 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000336/0000462 loss=3.22032±0.01530 acc=30.53±0.22% t=00:00:02 ETA=00:00:00 0.02.210.706 I epoch 0 lr=1e-30
+GRAD-PROBE iter=337 params=47 nonfinite=0 unread=0 max|grad|=73.2881 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000337/0000462 loss=3.21964±0.01527 acc=30.52±0.22% t=00:00:02 ETA=00:00:00 0.02.217.208 I epoch 0 lr=1e-30
+GRAD-PROBE iter=338 params=47 nonfinite=0 unread=0 max|grad|=73.6789 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000338/0000462 loss=3.22028±0.01524 acc=30.50±0.22% t=00:00:02 ETA=00:00:00 0.02.223.705 I epoch 0 lr=1e-30
+GRAD-PROBE iter=339 params=47 nonfinite=0 unread=0 max|grad|=74.0331 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▊  ] data=0000339/0000462 loss=3.22114±0.01522 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.230.354 I epoch 0 lr=1e-30
+GRAD-PROBE iter=340 params=47 nonfinite=0 unread=0 max|grad|=74.1072 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000340/0000462 loss=3.22163±0.01518 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.236.890 I epoch 0 lr=1e-30
+GRAD-PROBE iter=341 params=47 nonfinite=0 unread=0 max|grad|=74.2056 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000341/0000462 loss=3.22231±0.01515 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.243.406 I epoch 0 lr=1e-30
+GRAD-PROBE iter=342 params=47 nonfinite=0 unread=0 max|grad|=74.1963 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000342/0000462 loss=3.22197±0.01511 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.249.909 I epoch 0 lr=1e-30
+GRAD-PROBE iter=343 params=47 nonfinite=0 unread=0 max|grad|=74.2088 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000343/0000462 loss=3.22166±0.01507 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.256.327 I epoch 0 lr=1e-30
+GRAD-PROBE iter=344 params=47 nonfinite=0 unread=0 max|grad|=74.7212 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000344/0000462 loss=3.22179±0.01503 acc=30.49±0.22% t=00:00:02 ETA=00:00:00 0.02.262.872 I epoch 0 lr=1e-30
+GRAD-PROBE iter=345 params=47 nonfinite=0 unread=0 max|grad|=75.2313 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000345/0000462 loss=3.22197±0.01498 acc=30.49±0.22% t=00:00:02 ETA=00:00:00 0.02.269.318 I epoch 0 lr=1e-30
+GRAD-PROBE iter=346 params=47 nonfinite=0 unread=0 max|grad|=75.4373 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [█████▉  ] data=0000346/0000462 loss=3.22219±0.01494 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.275.892 I epoch 0 lr=1e-30
+GRAD-PROBE iter=347 params=47 nonfinite=0 unread=0 max|grad|=75.6495 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000347/0000462 loss=3.22258±0.01490 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.282.360 I epoch 0 lr=1e-30
+GRAD-PROBE iter=348 params=47 nonfinite=0 unread=0 max|grad|=75.8764 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000348/0000462 loss=3.22265±0.01486 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.288.950 I epoch 0 lr=1e-30
+GRAD-PROBE iter=349 params=47 nonfinite=0 unread=0 max|grad|=76.067 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000349/0000462 loss=3.22326±0.01483 acc=30.46±0.22% t=00:00:02 ETA=00:00:00 0.02.295.439 I epoch 0 lr=1e-30
+GRAD-PROBE iter=350 params=47 nonfinite=0 unread=0 max|grad|=76.3265 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000350/0000462 loss=3.22410±0.01481 acc=30.46±0.22% t=00:00:02 ETA=00:00:00 0.02.302.007 I epoch 0 lr=1e-30
+GRAD-PROBE iter=351 params=47 nonfinite=0 unread=0 max|grad|=76.5797 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000351/0000462 loss=3.22487±0.01479 acc=30.46±0.22% t=00:00:02 ETA=00:00:00 0.02.308.473 I epoch 0 lr=1e-30
+GRAD-PROBE iter=352 params=47 nonfinite=0 unread=0 max|grad|=76.9738 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000352/0000462 loss=3.22472±0.01475 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.314.988 I epoch 0 lr=1e-30
+GRAD-PROBE iter=353 params=47 nonfinite=0 unread=0 max|grad|=77.3761 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████  ] data=0000353/0000462 loss=3.22479±0.01471 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.321.441 I epoch 0 lr=1e-30
+GRAD-PROBE iter=354 params=47 nonfinite=0 unread=0 max|grad|=77.6641 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000354/0000462 loss=3.22561±0.01469 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.328.005 I epoch 0 lr=1e-30
+GRAD-PROBE iter=355 params=47 nonfinite=0 unread=0 max|grad|=77.9642 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000355/0000462 loss=3.22656±0.01468 acc=30.47±0.22% t=00:00:02 ETA=00:00:00 0.02.334.426 I epoch 0 lr=1e-30
+GRAD-PROBE iter=356 params=47 nonfinite=0 unread=0 max|grad|=78.2702 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000356/0000462 loss=3.22565±0.01467 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.340.915 I epoch 0 lr=1e-30
+GRAD-PROBE iter=357 params=47 nonfinite=0 unread=0 max|grad|=78.5916 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000357/0000462 loss=3.22490±0.01464 acc=30.49±0.22% t=00:00:02 ETA=00:00:00 0.02.347.464 I epoch 0 lr=1e-30
+GRAD-PROBE iter=358 params=47 nonfinite=0 unread=0 max|grad|=79.0711 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000358/0000462 loss=3.22535±0.01461 acc=30.48±0.22% t=00:00:02 ETA=00:00:00 0.02.354.186 I epoch 0 lr=1e-30
+GRAD-PROBE iter=359 params=47 nonfinite=0 unread=0 max|grad|=79.5875 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000359/0000462 loss=3.22582±0.01458 acc=30.47±0.21% t=00:00:02 ETA=00:00:00 0.02.360.808 I epoch 0 lr=1e-30
+GRAD-PROBE iter=360 params=47 nonfinite=0 unread=0 max|grad|=79.795 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▏ ] data=0000360/0000462 loss=3.22591±0.01454 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.367.357 I epoch 0 lr=1e-30
+GRAD-PROBE iter=361 params=47 nonfinite=0 unread=0 max|grad|=80.0392 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000361/0000462 loss=3.22634±0.01450 acc=30.49±0.21% t=00:00:02 ETA=00:00:00 0.02.373.830 I epoch 0 lr=1e-30
+GRAD-PROBE iter=362 params=47 nonfinite=0 unread=0 max|grad|=80.3453 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000362/0000462 loss=3.22551±0.01449 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.380.352 I epoch 0 lr=1e-30
+GRAD-PROBE iter=363 params=47 nonfinite=0 unread=0 max|grad|=80.6479 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000363/0000462 loss=3.22493±0.01446 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.386.841 I epoch 0 lr=1e-30
+GRAD-PROBE iter=364 params=47 nonfinite=0 unread=0 max|grad|=80.9528 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000364/0000462 loss=3.22455±0.01442 acc=30.47±0.21% t=00:00:02 ETA=00:00:00 0.02.393.412 I epoch 0 lr=1e-30
+GRAD-PROBE iter=365 params=47 nonfinite=0 unread=0 max|grad|=81.2878 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000365/0000462 loss=3.22398±0.01439 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.399.968 I epoch 0 lr=1e-30
+GRAD-PROBE iter=366 params=47 nonfinite=0 unread=0 max|grad|=81.3858 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000366/0000462 loss=3.22346±0.01437 acc=30.47±0.21% t=00:00:02 ETA=00:00:00 0.02.406.510 I epoch 0 lr=1e-30
+GRAD-PROBE iter=367 params=47 nonfinite=0 unread=0 max|grad|=81.496 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000367/0000462 loss=3.22321±0.01433 acc=30.47±0.21% t=00:00:02 ETA=00:00:00 0.02.412.982 I epoch 0 lr=1e-30
+GRAD-PROBE iter=368 params=47 nonfinite=0 unread=0 max|grad|=81.7574 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▎ ] data=0000368/0000462 loss=3.22222±0.01432 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.419.524 I epoch 0 lr=1e-30
+GRAD-PROBE iter=369 params=47 nonfinite=0 unread=0 max|grad|=82.0267 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000369/0000462 loss=3.22149±0.01430 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.425.978 I epoch 0 lr=1e-30
+GRAD-PROBE iter=370 params=47 nonfinite=0 unread=0 max|grad|=82.1429 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000370/0000462 loss=3.22149±0.01426 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.432.520 I epoch 0 lr=1e-30
+GRAD-PROBE iter=371 params=47 nonfinite=0 unread=0 max|grad|=82.279 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000371/0000462 loss=3.22164±0.01423 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.439.077 I epoch 0 lr=1e-30
+GRAD-PROBE iter=372 params=47 nonfinite=0 unread=0 max|grad|=82.4045 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000372/0000462 loss=3.22120±0.01420 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.445.611 I epoch 0 lr=1e-30
+GRAD-PROBE iter=373 params=47 nonfinite=0 unread=0 max|grad|=82.5395 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000373/0000462 loss=3.22106±0.01416 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.452.179 I epoch 0 lr=1e-30
+GRAD-PROBE iter=374 params=47 nonfinite=0 unread=0 max|grad|=82.8395 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000374/0000462 loss=3.22168±0.01413 acc=30.49±0.21% t=00:00:02 ETA=00:00:00 0.02.458.798 I epoch 0 lr=1e-30
+GRAD-PROBE iter=375 params=47 nonfinite=0 unread=0 max|grad|=83.1242 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▍ ] data=0000375/0000462 loss=3.22271±0.01413 acc=30.49±0.21% t=00:00:02 ETA=00:00:00 0.02.465.268 I epoch 0 lr=1e-30
+GRAD-PROBE iter=376 params=47 nonfinite=0 unread=0 max|grad|=83.1917 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000376/0000462 loss=3.22312±0.01410 acc=30.49±0.21% t=00:00:02 ETA=00:00:00 0.02.471.790 I epoch 0 lr=1e-30
+GRAD-PROBE iter=377 params=47 nonfinite=0 unread=0 max|grad|=83.2818 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000377/0000462 loss=3.22376±0.01408 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.478.225 I epoch 0 lr=1e-30
+GRAD-PROBE iter=378 params=47 nonfinite=0 unread=0 max|grad|=83.3395 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000378/0000462 loss=3.22483±0.01408 acc=30.48±0.21% t=00:00:02 ETA=00:00:00 0.02.484.755 I epoch 0 lr=1e-30
+GRAD-PROBE iter=379 params=47 nonfinite=0 unread=0 max|grad|=83.431 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000379/0000462 loss=3.22596±0.01409 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.491.229 I epoch 0 lr=1e-30
+GRAD-PROBE iter=380 params=47 nonfinite=0 unread=0 max|grad|=83.6769 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000380/0000462 loss=3.22672±0.01407 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.497.823 I epoch 0 lr=1e-30
+GRAD-PROBE iter=381 params=47 nonfinite=0 unread=0 max|grad|=83.9502 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000381/0000462 loss=3.22748±0.01406 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.504.325 I epoch 0 lr=1e-30
+GRAD-PROBE iter=382 params=47 nonfinite=0 unread=0 max|grad|=84.2095 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▌ ] data=0000382/0000462 loss=3.22650±0.01405 acc=30.47±0.21% t=00:00:02 ETA=00:00:00 0.02.510.935 I epoch 0 lr=1e-30
+GRAD-PROBE iter=383 params=47 nonfinite=0 unread=0 max|grad|=84.4572 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000383/0000462 loss=3.22577±0.01404 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.517.396 I epoch 0 lr=1e-30
+GRAD-PROBE iter=384 params=47 nonfinite=0 unread=0 max|grad|=84.4557 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000384/0000462 loss=3.22617±0.01401 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.523.936 I epoch 0 lr=1e-30
+GRAD-PROBE iter=385 params=47 nonfinite=0 unread=0 max|grad|=84.4905 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000385/0000462 loss=3.22669±0.01398 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.530.385 I epoch 0 lr=1e-30
+GRAD-PROBE iter=386 params=47 nonfinite=0 unread=0 max|grad|=84.7003 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000386/0000462 loss=3.22641±0.01394 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.536.967 I epoch 0 lr=1e-30
+GRAD-PROBE iter=387 params=47 nonfinite=0 unread=0 max|grad|=84.9265 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000387/0000462 loss=3.22630±0.01391 acc=30.45±0.21% t=00:00:02 ETA=00:00:00 0.02.543.453 I epoch 0 lr=1e-30
+GRAD-PROBE iter=388 params=47 nonfinite=0 unread=0 max|grad|=85.2096 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000388/0000462 loss=3.22659±0.01388 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.550.215 I epoch 0 lr=1e-30
+GRAD-PROBE iter=389 params=47 nonfinite=0 unread=0 max|grad|=85.439 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▋ ] data=0000389/0000462 loss=3.22723±0.01386 acc=30.45±0.21% t=00:00:02 ETA=00:00:00 0.02.556.836 I epoch 0 lr=1e-30
+GRAD-PROBE iter=390 params=47 nonfinite=0 unread=0 max|grad|=85.5386 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000390/0000462 loss=3.22765±0.01383 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.563.510 I epoch 0 lr=1e-30
+GRAD-PROBE iter=391 params=47 nonfinite=0 unread=0 max|grad|=85.6502 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000391/0000462 loss=3.22818±0.01380 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.570.106 I epoch 0 lr=1e-30
+GRAD-PROBE iter=392 params=47 nonfinite=0 unread=0 max|grad|=85.8199 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000392/0000462 loss=3.22831±0.01377 acc=30.46±0.21% t=00:00:02 ETA=00:00:00 0.02.576.716 I epoch 0 lr=1e-30
+GRAD-PROBE iter=393 params=47 nonfinite=0 unread=0 max|grad|=85.9938 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000393/0000462 loss=3.22881±0.01374 acc=30.45±0.21% t=00:00:02 ETA=00:00:00 0.02.583.219 I epoch 0 lr=1e-30
+GRAD-PROBE iter=394 params=47 nonfinite=0 unread=0 max|grad|=86.3128 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000394/0000462 loss=3.22908±0.01371 acc=30.44±0.20% t=00:00:02 ETA=00:00:00 0.02.589.770 I epoch 0 lr=1e-30
+GRAD-PROBE iter=395 params=47 nonfinite=0 unread=0 max|grad|=86.6819 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000395/0000462 loss=3.22957±0.01368 acc=30.44±0.20% t=00:00:02 ETA=00:00:00 0.02.596.852 I epoch 0 lr=1e-30
+GRAD-PROBE iter=396 params=47 nonfinite=0 unread=0 max|grad|=86.7754 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000396/0000462 loss=3.23092±0.01371 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.603.456 I epoch 0 lr=1e-30
+GRAD-PROBE iter=397 params=47 nonfinite=0 unread=0 max|grad|=86.8931 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▊ ] data=0000397/0000462 loss=3.23237±0.01376 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.609.997 I epoch 0 lr=1e-30
+GRAD-PROBE iter=398 params=47 nonfinite=0 unread=0 max|grad|=87.2709 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000398/0000462 loss=3.23216±0.01372 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.616.568 I epoch 0 lr=1e-30
+GRAD-PROBE iter=399 params=47 nonfinite=0 unread=0 max|grad|=87.6201 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000399/0000462 loss=3.23208±0.01369 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.623.070 I epoch 0 lr=1e-30
+GRAD-PROBE iter=400 params=47 nonfinite=0 unread=0 max|grad|=87.7169 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000400/0000462 loss=3.23210±0.01365 acc=30.40±0.20% t=00:00:02 ETA=00:00:00 0.02.629.610 I epoch 0 lr=1e-30
+GRAD-PROBE iter=401 params=47 nonfinite=0 unread=0 max|grad|=87.8358 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000401/0000462 loss=3.23220±0.01362 acc=30.39±0.20% t=00:00:02 ETA=00:00:00 0.02.636.091 I epoch 0 lr=1e-30
+GRAD-PROBE iter=402 params=47 nonfinite=0 unread=0 max|grad|=88.2486 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000402/0000462 loss=3.23346±0.01364 acc=30.40±0.20% t=00:00:02 ETA=00:00:00 0.02.642.614 I epoch 0 lr=1e-30
+GRAD-PROBE iter=403 params=47 nonfinite=0 unread=0 max|grad|=88.6552 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000403/0000462 loss=3.23482±0.01368 acc=30.40±0.20% t=00:00:02 ETA=00:00:00 0.02.649.104 I epoch 0 lr=1e-30
+GRAD-PROBE iter=404 params=47 nonfinite=0 unread=0 max|grad|=89.0889 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [██████▉ ] data=0000404/0000462 loss=3.23383±0.01368 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.655.658 I epoch 0 lr=1e-30
+GRAD-PROBE iter=405 params=47 nonfinite=0 unread=0 max|grad|=89.5257 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000405/0000462 loss=3.23309±0.01367 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.662.143 I epoch 0 lr=1e-30
+GRAD-PROBE iter=406 params=47 nonfinite=0 unread=0 max|grad|=89.8735 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000406/0000462 loss=3.23331±0.01364 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.668.701 I epoch 0 lr=1e-30
+GRAD-PROBE iter=407 params=47 nonfinite=0 unread=0 max|grad|=90.2938 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000407/0000462 loss=3.23359±0.01360 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.675.253 I epoch 0 lr=1e-30
+GRAD-PROBE iter=408 params=47 nonfinite=0 unread=0 max|grad|=90.3529 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000408/0000462 loss=3.23288±0.01359 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.681.824 I epoch 0 lr=1e-30
+GRAD-PROBE iter=409 params=47 nonfinite=0 unread=0 max|grad|=90.4502 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000409/0000462 loss=3.23239±0.01357 acc=30.40±0.20% t=00:00:02 ETA=00:00:00 0.02.688.336 I epoch 0 lr=1e-30
+GRAD-PROBE iter=410 params=47 nonfinite=0 unread=0 max|grad|=90.8089 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000410/0000462 loss=3.23106±0.01360 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.694.868 I epoch 0 lr=1e-30
+GRAD-PROBE iter=411 params=47 nonfinite=0 unread=0 max|grad|=91.1314 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████ ] data=0000411/0000462 loss=3.22988±0.01362 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.701.311 I epoch 0 lr=1e-30
+GRAD-PROBE iter=412 params=47 nonfinite=0 unread=0 max|grad|=91.1537 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000412/0000462 loss=3.22949±0.01359 acc=30.44±0.20% t=00:00:02 ETA=00:00:00 0.02.707.812 I epoch 0 lr=1e-30
+GRAD-PROBE iter=413 params=47 nonfinite=0 unread=0 max|grad|=91.2147 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000413/0000462 loss=3.22934±0.01356 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.714.229 I epoch 0 lr=1e-30
+GRAD-PROBE iter=414 params=47 nonfinite=0 unread=0 max|grad|=91.4702 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000414/0000462 loss=3.23107±0.01363 acc=30.44±0.20% t=00:00:02 ETA=00:00:00 0.02.720.740 I epoch 0 lr=1e-30
+GRAD-PROBE iter=415 params=47 nonfinite=0 unread=0 max|grad|=91.7214 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000415/0000462 loss=3.23322±0.01377 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.727.184 I epoch 0 lr=1e-30
+GRAD-PROBE iter=416 params=47 nonfinite=0 unread=0 max|grad|=91.9744 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000416/0000462 loss=3.23279±0.01374 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.733.695 I epoch 0 lr=1e-30
+GRAD-PROBE iter=417 params=47 nonfinite=0 unread=0 max|grad|=92.248 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000417/0000462 loss=3.23241±0.01372 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.740.177 I epoch 0 lr=1e-30
+GRAD-PROBE iter=418 params=47 nonfinite=0 unread=0 max|grad|=92.4357 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▏] data=0000418/0000462 loss=3.23331±0.01371 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.746.713 I epoch 0 lr=1e-30
+GRAD-PROBE iter=419 params=47 nonfinite=0 unread=0 max|grad|=92.6617 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000419/0000462 loss=3.23442±0.01372 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.753.178 I epoch 0 lr=1e-30
+GRAD-PROBE iter=420 params=47 nonfinite=0 unread=0 max|grad|=92.7216 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000420/0000462 loss=3.23342±0.01373 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.759.684 I epoch 0 lr=1e-30
+GRAD-PROBE iter=421 params=47 nonfinite=0 unread=0 max|grad|=92.7934 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000421/0000462 loss=3.23259±0.01372 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.766.123 I epoch 0 lr=1e-30
+GRAD-PROBE iter=422 params=47 nonfinite=0 unread=0 max|grad|=92.9683 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000422/0000462 loss=3.23203±0.01370 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.772.731 I epoch 0 lr=1e-30
+GRAD-PROBE iter=423 params=47 nonfinite=0 unread=0 max|grad|=93.1351 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000423/0000462 loss=3.23157±0.01368 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.779.181 I epoch 0 lr=1e-30
+GRAD-PROBE iter=424 params=47 nonfinite=0 unread=0 max|grad|=93.2173 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000424/0000462 loss=3.23185±0.01365 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.785.672 I epoch 0 lr=1e-30
+GRAD-PROBE iter=425 params=47 nonfinite=0 unread=0 max|grad|=93.3349 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▎] data=0000425/0000462 loss=3.23219±0.01362 acc=30.41±0.20% t=00:00:02 ETA=00:00:00 0.02.792.170 I epoch 0 lr=1e-30
+GRAD-PROBE iter=426 params=47 nonfinite=0 unread=0 max|grad|=93.576 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000426/0000462 loss=3.23181±0.01359 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.798.693 I epoch 0 lr=1e-30
+GRAD-PROBE iter=427 params=47 nonfinite=0 unread=0 max|grad|=93.8122 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000427/0000462 loss=3.23159±0.01356 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.805.146 I epoch 0 lr=1e-30
+GRAD-PROBE iter=428 params=47 nonfinite=0 unread=0 max|grad|=93.8836 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000428/0000462 loss=3.23137±0.01353 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.811.653 I epoch 0 lr=1e-30
+GRAD-PROBE iter=429 params=47 nonfinite=0 unread=0 max|grad|=93.9734 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000429/0000462 loss=3.23117±0.01350 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.818.096 I epoch 0 lr=1e-30
+GRAD-PROBE iter=430 params=47 nonfinite=0 unread=0 max|grad|=94.1589 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000430/0000462 loss=3.23199±0.01350 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.824.588 I epoch 0 lr=1e-30
+GRAD-PROBE iter=431 params=47 nonfinite=0 unread=0 max|grad|=94.3189 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000431/0000462 loss=3.23317±0.01352 acc=30.42±0.20% t=00:00:02 ETA=00:00:00 0.02.831.026 I epoch 0 lr=1e-30
+GRAD-PROBE iter=432 params=47 nonfinite=0 unread=0 max|grad|=94.6236 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000432/0000462 loss=3.23360±0.01349 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.837.533 I epoch 0 lr=1e-30
+GRAD-PROBE iter=433 params=47 nonfinite=0 unread=0 max|grad|=94.924 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▍] data=0000433/0000462 loss=3.23421±0.01347 acc=30.43±0.20% t=00:00:02 ETA=00:00:00 0.02.844.007 I epoch 0 lr=1e-30
+GRAD-PROBE iter=434 params=47 nonfinite=0 unread=0 max|grad|=95.343 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000434/0000462 loss=3.23324±0.01348 acc=30.46±0.20% t=00:00:02 ETA=00:00:00 0.02.850.515 I epoch 0 lr=1e-30
+GRAD-PROBE iter=435 params=47 nonfinite=0 unread=0 max|grad|=95.7321 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000435/0000462 loss=3.23260±0.01346 acc=30.47±0.20% t=00:00:02 ETA=00:00:00 0.02.857.047 I epoch 0 lr=1e-30
+GRAD-PROBE iter=436 params=47 nonfinite=0 unread=0 max|grad|=95.8718 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000436/0000462 loss=3.23297±0.01344 acc=30.46±0.19% t=00:00:02 ETA=00:00:00 0.02.863.586 I epoch 0 lr=1e-30
+GRAD-PROBE iter=437 params=47 nonfinite=0 unread=0 max|grad|=96.082 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000437/0000462 loss=3.23345±0.01341 acc=30.46±0.19% t=00:00:02 ETA=00:00:00 0.02.870.091 I epoch 0 lr=1e-30
+GRAD-PROBE iter=438 params=47 nonfinite=0 unread=0 max|grad|=96.4513 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000438/0000462 loss=3.23386±0.01339 acc=30.45±0.19% t=00:00:02 ETA=00:00:00 0.02.876.614 I epoch 0 lr=1e-30
+GRAD-PROBE iter=439 params=47 nonfinite=0 unread=0 max|grad|=96.7998 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000439/0000462 loss=3.23464±0.01338 acc=30.44±0.19% t=00:00:02 ETA=00:00:00 0.02.883.047 I epoch 0 lr=1e-30
+GRAD-PROBE iter=440 params=47 nonfinite=0 unread=0 max|grad|=96.9748 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▌] data=0000440/0000462 loss=3.23416±0.01336 acc=30.46±0.19% t=00:00:02 ETA=00:00:00 0.02.889.677 I epoch 0 lr=1e-30
+GRAD-PROBE iter=441 params=47 nonfinite=0 unread=0 max|grad|=97.1351 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000441/0000462 loss=3.23394±0.01333 acc=30.47±0.19% t=00:00:02 ETA=00:00:00 0.02.896.129 I epoch 0 lr=1e-30
+GRAD-PROBE iter=442 params=47 nonfinite=0 unread=0 max|grad|=97.3303 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000442/0000462 loss=3.23455±0.01331 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.902.632 I epoch 0 lr=1e-30
+GRAD-PROBE iter=443 params=47 nonfinite=0 unread=0 max|grad|=97.5582 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000443/0000462 loss=3.23551±0.01332 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.909.091 I epoch 0 lr=1e-30
+GRAD-PROBE iter=444 params=47 nonfinite=0 unread=0 max|grad|=97.7892 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000444/0000462 loss=3.23566±0.01329 acc=30.49±0.19% t=00:00:02 ETA=00:00:00 0.02.915.585 I epoch 0 lr=1e-30
+GRAD-PROBE iter=445 params=47 nonfinite=0 unread=0 max|grad|=98.0599 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000445/0000462 loss=3.23607±0.01327 acc=30.50±0.19% t=00:00:02 ETA=00:00:00 0.02.922.036 I epoch 0 lr=1e-30
+GRAD-PROBE iter=446 params=47 nonfinite=0 unread=0 max|grad|=98.333 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000446/0000462 loss=3.23563±0.01324 acc=30.49±0.19% t=00:00:02 ETA=00:00:00 0.02.928.537 I epoch 0 lr=1e-30
+GRAD-PROBE iter=447 params=47 nonfinite=0 unread=0 max|grad|=98.6451 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▋] data=0000447/0000462 loss=3.23559±0.01321 acc=30.47±0.19% t=00:00:02 ETA=00:00:00 0.02.935.017 I epoch 0 lr=1e-30
+GRAD-PROBE iter=448 params=47 nonfinite=0 unread=0 max|grad|=98.7553 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000448/0000462 loss=3.23517±0.01319 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.941.600 I epoch 0 lr=1e-30
+GRAD-PROBE iter=449 params=47 nonfinite=0 unread=0 max|grad|=98.8731 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000449/0000462 loss=3.23490±0.01316 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.948.069 I epoch 0 lr=1e-30
+GRAD-PROBE iter=450 params=47 nonfinite=0 unread=0 max|grad|=98.9931 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000450/0000462 loss=3.23618±0.01320 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.954.591 I epoch 0 lr=1e-30
+GRAD-PROBE iter=451 params=47 nonfinite=0 unread=0 max|grad|=99.1481 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000451/0000462 loss=3.23768±0.01325 acc=30.48±0.19% t=00:00:02 ETA=00:00:00 0.02.961.049 I epoch 0 lr=1e-30
+GRAD-PROBE iter=452 params=47 nonfinite=0 unread=0 max|grad|=99.4151 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000452/0000462 loss=3.23615±0.01331 acc=30.50±0.19% t=00:00:02 ETA=00:00:00 0.02.967.599 I epoch 0 lr=1e-30
+GRAD-PROBE iter=453 params=47 nonfinite=0 unread=0 max|grad|=99.688 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000453/0000462 loss=3.23479±0.01335 acc=30.51±0.19% t=00:00:02 ETA=00:00:00 0.02.974.367 I epoch 0 lr=1e-30
+GRAD-PROBE iter=454 params=47 nonfinite=0 unread=0 max|grad|=100.019 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▊] data=0000454/0000462 loss=3.23391±0.01335 acc=30.52±0.19% t=00:00:02 ETA=00:00:00 0.02.982.082 I epoch 0 lr=1e-30
+GRAD-PROBE iter=455 params=47 nonfinite=0 unread=0 max|grad|=100.354 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000455/0000462 loss=3.23310±0.01335 acc=30.53±0.19% t=00:00:02 ETA=00:00:00 0.02.988.568 I epoch 0 lr=1e-30
+GRAD-PROBE iter=456 params=47 nonfinite=0 unread=0 max|grad|=100.476 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000456/0000462 loss=3.23281±0.01332 acc=30.52±0.19% t=00:00:02 ETA=00:00:00 0.02.995.087 I epoch 0 lr=1e-30
+GRAD-PROBE iter=457 params=47 nonfinite=0 unread=0 max|grad|=100.698 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000457/0000462 loss=3.23269±0.01329 acc=30.51±0.19% t=00:00:02 ETA=00:00:00 0.03.001.675 I epoch 0 lr=1e-30
+GRAD-PROBE iter=458 params=47 nonfinite=0 unread=0 max|grad|=100.85 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000458/0000462 loss=3.23264±0.01326 acc=30.52±0.19% t=00:00:02 ETA=00:00:00 0.03.008.224 I epoch 0 lr=1e-30
+GRAD-PROBE iter=459 params=47 nonfinite=0 unread=0 max|grad|=101.014 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000459/0000462 loss=3.23278±0.01323 acc=30.52±0.19% t=00:00:02 ETA=00:00:00 0.03.014.755 I epoch 0 lr=1e-30
+GRAD-PROBE iter=460 params=47 nonfinite=0 unread=0 max|grad|=101.278 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000460/0000462 loss=3.23252±0.01321 acc=30.53±0.19% t=00:00:03 ETA=00:00:00 0.03.021.353 I epoch 0 lr=1e-30
+GRAD-PROBE iter=461 params=47 nonfinite=0 unread=0 max|grad|=101.558 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000461/0000462 loss=3.23257±0.01318 acc=30.54±0.19% t=00:00:03 ETA=00:00:00 0.03.027.801 I epoch 0 lr=1e-30
+GRAD-PROBE iter=462 params=47 nonfinite=0 unread=0 max|grad|=101.944 on output.weight | max|w|=4.42509 on output_norm.weight
+train: [███████▉] data=0000462/0000462 loss=3.23390±0.01322 acc=30.52±0.19% t=00:00:03 ETA=00:00:00 
+val:   [▎       ] data=0000001/0000026 loss=3.80241±nan acc=23.44±3.76% t=00:00:00 ETA=00:00:00 val:   [▌       ] data=0000002/0000026 loss=3.59128±0.21113 acc=24.61±2.70% t=00:00:00 ETA=00:00:00 val:   [▉       ] data=0000003/0000026 loss=3.55459±0.12730 acc=25.00±2.21% t=00:00:00 ETA=00:00:00 val:   [█▏      ] data=0000004/0000026 loss=3.36250±0.21213 acc=28.32±1.99% t=00:00:00 ETA=00:00:00 val:   [█▌      ] data=0000005/0000026 loss=3.25613±0.19574 acc=30.78±1.83% t=00:00:00 ETA=00:00:00 val:   [█▊      ] data=0000006/0000026 loss=3.22393±0.16304 acc=31.38±1.68% t=00:00:00 ETA=00:00:00 val:   [██▏     ] data=0000007/0000026 loss=3.21658±0.13799 acc=31.70±1.56% t=00:00:00 ETA=00:00:00 val:   [██▍     ] data=0000008/0000026 loss=3.19204±0.12199 acc=31.93±1.46% t=00:00:00 ETA=00:00:00 val:   [██▊     ] data=0000009/0000026 loss=3.18352±0.10793 acc=32.20±1.38% t=00:00:00 ETA=00:00:00 val:   [███     ] data=0000010/0000026 loss=3.21340±0.10105 acc=31.95±1.30% t=00:00:00 ETA=00:00:00 val:   [███▍    ] data=0000011/0000026 loss=3.23803±0.09467 acc=31.82±1.24% t=00:00:00 ETA=00:00:00 val:   [███▋    ] data=0000012/0000026 loss=3.19243±0.09771 acc=31.84±1.19% t=00:00:00 ETA=00:00:00 val:   [███▉    ] data=0000013/0000026 loss=3.15790±0.09629 acc=31.79±1.14% t=00:00:00 ETA=00:00:00 val:   [████▎   ] data=0000014/0000026 loss=3.15945±0.08916 acc=31.70±1.10% t=00:00:00 ETA=00:00:00 val:   [████▌   ] data=0000015/0000026 loss=3.17108±0.08381 acc=31.41±1.06% t=00:00:00 ETA=00:00:00 val:   [████▉   ] data=0000016/0000026 loss=3.17289±0.07842 acc=31.25±1.02% t=00:00:00 ETA=00:00:00 val:   [█████▏  ] data=0000017/0000026 loss=3.18268±0.07431 acc=30.97±0.99% t=00:00:00 ETA=00:00:00 val:   [█████▌  ] data=0000018/0000026 loss=3.17612±0.07037 acc=31.16±0.97% t=00:00:00 ETA=00:00:00 val:   [█████▊  ] data=0000019/0000026 loss=3.17220±0.06667 acc=31.33±0.94% t=00:00:00 ETA=00:00:00 val:   [██████▏ ] data=0000020/0000026 loss=3.16723±0.06345 acc=31.33±0.92% t=00:00:00 ETA=00:00:00 val:   [██████▍ ] data=0000021/0000026 loss=3.16516±0.06039 acc=31.36±0.90% t=00:00:00 ETA=00:00:00 val:   [██████▊ ] data=0000022/0000026 loss=3.17103±0.05787 acc=31.43±0.87% t=00:00:00 ETA=00:00:00 val:   [███████ ] data=0000023/0000026 loss=3.17860±0.05582 acc=31.42±0.86% t=00:00:00 ETA=00:00:00 val:   [███████▍] data=0000024/0000026 loss=3.19116±0.05490 acc=31.28±0.84% t=00:00:00 ETA=00:00:00 val:   [███████▋] data=0000025/0000026 loss=3.20689±0.05495 acc=31.19±0.82% t=00:00:00 ETA=00:00:00 val:   [███████▉] data=0000026/0000026 loss=3.22601±0.05615 acc=31.25±0.80% t=00:00:00 ETA=00:00:00 
+

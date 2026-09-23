@@ -1,0 +1,85 @@
+diff --git a/ggml/src/ggml-opt.cpp b/ggml/src/ggml-opt.cpp
+index 53903de..1b306f5 100644
+--- a/ggml/src/ggml-opt.cpp
++++ b/ggml/src/ggml-opt.cpp
+@@ -736,6 +736,17 @@ void ggml_opt_alloc(ggml_opt_context_t opt_ctx, bool backward) {
+ 
+     if (!opt_ctx->static_graphs) {
+         ggml_opt_build(opt_ctx);
++
++        // On the dynamic-graph path the graphs are rebuilt on every call. The reset of gb_grad
++        // above runs before this rebuild, while gb_grad is still null (ggml_opt_eval clears it
++        // after every step on this path), so it has no effect and the gradient accumulators are
++        // never cleared. Reset the rebuilt gb_grad at the start of each accumulation window.
++        // gb_grad holds no optimizer step, so the AdamW moments in gb_opt are left untouched.
++        // REPRODUCTION ONLY: FT_NO_GRAD_RESET, set to any value, skips this reset so the
++        // defect can be shown on demand.
++        if (opt_ctx->gb_grad && opt_ctx->opt_i == 0 && !getenv("FT_NO_GRAD_RESET")) {
++            ggml_graph_reset(opt_ctx->gb_grad);
++        }
+     }
+ 
+     struct ggml_cgraph * graph = nullptr;
+@@ -822,6 +833,62 @@ void ggml_opt_eval(ggml_opt_context_t opt_ctx, ggml_opt_result_t result) {
+     }
+ 
+     ggml_backend_sched_graph_compute(opt_ctx->backend_sched, opt_ctx->allocated_graph_copy);
++
++    // REPRODUCTION ONLY: FT_GRAD_PROBE prints, once per optimizer step, the largest absolute
++    // gradient and the largest absolute weight across all F32 parameters. Tensor data is copied to
++    // host memory first, because it can live in a device buffer even at -ngl 0.
++    if (getenv("FT_GRAD_PROBE") && opt_ctx->allocated_graph == opt_ctx->gb_opt) {
++        struct ft_host {
++            std::vector<float> v;
++            bool ok = false;
++            explicit ft_host(const struct ggml_tensor * t) {
++                if (!t || t->type != GGML_TYPE_F32 || !t->buffer) { return; }
++                v.resize((size_t) ggml_nelements(t));
++                ggml_backend_tensor_get(t, v.data(), 0, ggml_nbytes(t));
++                ok = true;
++            }
++        };
++        struct ggml_cgraph * g = opt_ctx->allocated_graph_copy;
++        double  gmax = 0.0, wmax = 0.0;
++        const char * gname = "-";
++        const char * wname = "-";
++        int64_t n_params = 0, n_bad = 0, n_unread = 0;
++        for (int i = 0; i < ggml_graph_n_nodes(g); ++i) {
++            struct ggml_tensor * node = ggml_graph_node(g, i);
++            if (!(node->flags & GGML_TENSOR_FLAG_PARAM) || node->type != GGML_TYPE_F32) {
++                continue;
++            }
++            n_params++;
++            const int64_t ne = ggml_nelements(node);
++            ft_host wh(node);
++            if (wh.ok) {
++                const float * w = wh.v.data();
++                for (int64_t j = 0; j < ne; ++j) {
++                    const float a = fabsf(w[j]);
++                    if (!isfinite(w[j])) { n_bad++; }
++                    if (a > wmax) { wmax = a; wname = node->name; }
++                }
++            } else {
++                n_unread++;
++            }
++            struct ggml_tensor * gr = ggml_graph_get_grad(g, node);
++            ft_host gh(gr);
++            if (gh.ok) {
++                const float * d = gh.v.data();
++                const int64_t gn = ggml_nelements(gr);
++                for (int64_t j = 0; j < gn; ++j) {
++                    const float a = fabsf(d[j]);
++                    if (!isfinite(d[j])) { n_bad++; }
++                    if (a > gmax) { gmax = a; gname = node->name; }
++                }
++            } else if (gr) {
++                n_unread++;
++            }
++        }
++        fprintf(stderr, "GRAD-PROBE iter=%" PRId64 " params=%" PRId64 " nonfinite=%" PRId64
++                " unread=%" PRId64 " max|grad|=%.6g on %s | max|w|=%.6g on %s\n",
++                opt_ctx->iter, n_params, n_bad, n_unread, gmax, gname, wmax, wname);
++    }
+     opt_ctx->iter += opt_ctx->allocated_graph == opt_ctx->gb_opt;
+     opt_ctx->opt_i = (opt_ctx->opt_i + 1) % opt_ctx->opt_period;
+ 

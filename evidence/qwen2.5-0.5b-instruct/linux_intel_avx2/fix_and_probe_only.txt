@@ -1,0 +1,27 @@
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.002.288 I main: forcing load_mode = none to enable writable pointers to the weights
+0.00.002.290 I main: force changing k cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.002.290 I main: force changing v cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.338.369 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.141.898 I cmn          init: llama threadpool init, n_threads = 6
+0.01.197.590 I 
+0.01.197.665 I system_info: n_threads = 6 (n_threads_batch = 6) / 12 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.01.217.900 I -optimizer adamw -lr0 1e-30 -wd 0 -lr-min -1 -min-epochs -1 -epochs 1 -period 1 -val 0.05
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/ggml/src/ggml.c:7291: GGML_ASSERT(cgraph->n_nodes < cgraph->size) failed
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(+0x1d44b)[0x71c619b2944b]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(ggml_print_backtrace+0x21c)[0x71c619b298cc]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(ggml_abort+0x15b)[0x71c619b29aab]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(+0x2092d)[0x71c619b2c92d]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(ggml_build_forward_expand+0x1c)[0x71c619b3a47c]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(ggml_build_backward_expand+0x146d)[0x71c619b3bedd]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(+0x59ee6)[0x71c619b65ee6]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libggml-base.so.0(ggml_opt_alloc+0x12d)[0x71c619b66c6d]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libllama.so.0(_ZN13llama_context14opt_epoch_iterEP16ggml_opt_datasetP15ggml_opt_resultRKSt6vectorIiSaIiEES8_R11llama_batchPFvbP16ggml_opt_contextS1_S3_lllEblll+0x425)[0x71c6193f4eb5]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/libllama.so.0(_ZN13llama_context9opt_epochEP16ggml_opt_datasetP15ggml_opt_resultS3_lPFvbP16ggml_opt_contextS1_S3_lllES7_+0x285)[0x71c6193f5575]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/llama-finetune(+0x2881)[0x57bc8462c881]
+/lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x71c618a2a1ca]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x71c618a2a28b]
+/home/ron/repro_master/llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad/build/bin/llama-finetune(+0x2a95)[0x57bc8462ca95]
+timeout: the monitored command dumped core

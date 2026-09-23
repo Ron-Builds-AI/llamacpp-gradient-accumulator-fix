@@ -1,0 +1,12 @@
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.002.897 I main: forcing load_mode = none to enable writable pointers to the weights
+0.00.002.900 I main: force changing k cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.002.900 I main: force changing v cache type to f32 due to a lack of f16 support for OUT_PROD
+0.00.307.613 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.773.211 I cmn          init: llama threadpool init, n_threads = 6
+0.00.807.517 I 
+0.00.807.557 I system_info: n_threads = 6 (n_threads_batch = 6) / 32 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | AVX512 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.817.293 I -optimizer adamw -lr0 1e-30 -wd 0 -lr-min -1 -min-epochs -1 -epochs 1 -period 1 -val 0.05
+M:\llama_cpp_repro_e6ab7c1a\llama.cpp-e6ab7c1a41054a888ada952eab4c886444c2f5ad\ggml\src\ggml.c:7291: GGML_ASSERT(cgraph->n_nodes < cgraph->size) failed

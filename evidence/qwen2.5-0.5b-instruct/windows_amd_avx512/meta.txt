@@ -1,0 +1,6 @@
+host cpu : AMD Ryzen 9 9950X3D 16-Core Processor          
+os       : Microsoft Windows 11 Pro 10.0.26200   [re-queried after the run; the in-run query failed on a quoting error]
+cmake    : cmake version 4.2.3
+model    : 2526617440 bytes  sha256 89ac62425c46039797e260ad4789adeda174320aa400e8b4b0d4a5e9aaa4ac25
+data     : 51792 bytes, 400 lines
+compiler : MSVC 19.51.36244.0   [taken from the cmake configure log of the same build]
