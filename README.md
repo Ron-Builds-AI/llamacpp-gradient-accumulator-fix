@@ -191,7 +191,7 @@ so its residuals are not independent and a standard error would overstate the pr
 
 Step 1 is identical in both arms on every run, because nothing has accumulated yet. On Qwen it differs between the machines in the fifth significant figure (2.77048 on Linux, 2.77055 on Windows), as two independent floating-point paths can. On stories260K it is 0.400439 on both.
 
-**The weights held still.** On stories260K every printed field of the train loss is identical between the two arms at all 462 steps, on both machines. On Qwen the running train loss agrees between the arms to five decimals at every step on both machines, ending at 2.22628; on Linux every field matches, and on Windows the `±` field differs in its last digit at steps 3 and 12. The largest weight is unchanged at every step of every run: 4.42509 on `output_norm.weight` for stories260K, and 214 on `blk.8.attn_k.bias` for Qwen.
+**The nonzero weights held still.** On stories260K every printed field of the train loss is identical between the two arms at all 462 steps, on both machines. On Qwen the running train loss agrees between the arms to five decimals at every step on both machines, ending at 2.22628; on Linux every field matches, and on Windows the `±` field differs in its last digit at steps 3 and 12. The largest weight is unchanged at every step of every run: 4.42509 on `output_norm.weight` for stories260K, and 214 on `blk.8.attn_k.bias` for Qwen. A later check on the Windows machine found one exception. On Qwen, 18,408,222 weights that are exactly zero in the F32 file moved in each arm, by at most 3.74e-29, in 121 of 291 tensors, and no nonzero weight moved (the per-tensor counts in `D_out_active_vs_input.txt` and `D_out_disabled_vs_input.txt` each sum to 18,408,222). With every exactly-zero weight set to 1e-20 first, nothing moved, the two arms printed the same train loss at every step, and the `±` difference at steps 3 and 12 went away. The logs and the two scripts that made them are in `evidence/zero_weights_windows/`.
 
 ## What is in here
 
@@ -205,6 +205,7 @@ Step 1 is identical in both arms on every run, because nothing has accumulated y
 | `REPRO_window_synthetic.txt` | the training data, described below |
 | `evidence/stories260K/` | `model_header.txt`, and per machine: `stock_master.txt`, `reset_disabled.txt`, `reset_active.txt`, `binaries_stock.sha256`, `binaries_patched.sha256` |
 | `evidence/qwen2.5-0.5b-instruct/` | `model_header.txt`, and per machine: `stock_master.txt`, `fix_and_probe_only.txt`, `reset_disabled.txt`, `reset_active.txt`, `meta.txt` (CPU, OS, compiler, model hash, data size), and the matching `binaries_*.sha256` |
+| `evidence/zero_weights_windows/` | the Windows follow-up on Qwen: the two arms rerun with their output models kept (`D_keepout_active.txt`, `D_keepout_disabled.txt`), each output model compared with the input (`D_out_active_vs_input.txt`, `D_out_disabled_vs_input.txt`), the control with every exactly-zero weight set to 1e-20 (`E_make.txt`, `E_nozero_active.txt`, `E_nozero_disabled.txt`, `E_out_vs_input.txt`), and the two scripts (`gguf_tensor_diff.py`, `make_nozero_model.py`, whose first lines point at a local copy of llama.cpp's `gguf-py`; point them at yours) |
 
 The run logs are as the programs wrote them. The runs were wrapped in coreutils `timeout`; on Linux the
 logs of the aborted runs end with its report. In the Windows Qwen `meta.txt` the OS line was re-queried
@@ -260,5 +261,5 @@ MIT, matching llama.cpp.
 ---
 
 *Drafted and fact-checked with an AI assistant from my own records, measurements and decisions. I read
-and edited every sentence and I am responsible for its contents. The patches were written with an AI
-assistant and tested on my own machines.*
+every sentence and I am responsible for its contents. The patches were written with an AI
+assistant at my direction and tested on my own machines.*
